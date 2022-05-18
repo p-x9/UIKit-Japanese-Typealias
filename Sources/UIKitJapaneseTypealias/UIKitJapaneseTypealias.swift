@@ -1,6 +1,10 @@
 import UIKit
 
 public typealias 端末 = UIDevice
+
+public typealias アプリケーション = UIApplication
+public typealias アプリケーション委任 = UIApplicationDelegate
+
 public typealias 窓 = UIWindow
 public typealias スクリーン = UIScreen
 public typealias シーン = UIScene
@@ -34,3 +38,16 @@ public typealias コレクション表示 = UICollectionView
 public typealias 色 = UIColor
 public typealias 画像 = UIImage
 public typealias フォント = UIFont
+
+public typealias イベント = UIEvent
+public typealias アクション = UIAction
+
+/* UITableView */
+public typealias テーブル表示委任 = UITableViewDelegate
+public typealias テーブル表示データ源 = UITableViewDataSource
+public typealias テーブル表示データ源事前取得 = UITableViewDataSourcePrefetching
+
+/* UICollectionView */
+public typealias コレクション表示委任 = UICollectionViewDelegate
+public typealias コレクション表示データ源 = UICollectionViewDataSource
+public typealias コレクション表示データ源事前取得 = UICollectionViewDataSourcePrefetching
