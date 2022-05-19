@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "foundation-japanese-typealias",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/p-x9/Foundation-Japanese-Typealias.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "1117ca53f7eae6c1d282a439b48e9087be35b608"
+      }
+    }
+  ],
+  "version" : 2
+}

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FoundationJapaneseTypealias
 
 public extension 表示 {
     var タグ: Int {
@@ -96,7 +97,7 @@ public extension 表示 {
         }
     }
     
-    var 隠れているか: Bool {
+    var 隠れているか: 真理値 {
         get {
             isHidden
         }
@@ -105,7 +106,7 @@ public extension 表示 {
         }
     }
     
-    var 透けているか: Bool {
+    var 透けているか: 真理値 {
         get {
             isOpaque
         }
@@ -114,7 +115,7 @@ public extension 表示 {
         }
     }
     
-    var はみ出すか: Bool {
+    var はみ出すか: 真理値 {
         get {
             clipsToBounds
         }
@@ -227,7 +228,7 @@ public extension 表示 {
     }
     
     /// func needsUpdateConstraints() -> Bool
-    func 制約の更新が必要か() -> Bool {
+    func 制約の更新が必要か() -> 真理値 {
         self.needsUpdateConstraints()
     }
     
