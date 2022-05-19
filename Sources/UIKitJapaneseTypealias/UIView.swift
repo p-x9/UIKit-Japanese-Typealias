@@ -9,6 +9,18 @@
 import UIKit
 
 public extension 表示 {
+    var タグ: Int {
+        get {
+            tag
+        }
+        set {
+            tag = newValue
+        }
+    }
+    var レイヤ: レイヤ {
+        self.layer
+    }
+    
     var 背景色: 色? {
         get {
             self.backgroundColor
@@ -17,6 +29,16 @@ public extension 表示 {
             self.backgroundColor = newValue
         }
     }
+    
+    var 透明度: CGFloat {
+        get {
+            alpha
+        }
+        set {
+            alpha = newValue
+        }
+    }
+    
     var 位置と大きさ: 位置と大きさ {
         get {
             self.frame
@@ -55,6 +77,101 @@ public extension 表示 {
     var 子表示たち: [表示] {
         self.subviews
     }
+    
+    var マスク: 表示? {
+        get {
+            mask
+        }
+        set {
+            mask = newValue
+        }
+    }
+    
+    var 内容モード: UIView.ContentMode {
+        get {
+            contentMode
+        }
+        set {
+            contentMode  = newValue
+        }
+    }
+    
+    var 隠れているか: Bool {
+        get {
+            isHidden
+        }
+        set {
+            isHidden = isHidden
+        }
+    }
+    
+    var 透けているか: Bool {
+        get {
+            isOpaque
+        }
+        set {
+            isOpaque = newValue
+        }
+    }
+    
+    var はみ出すか: Bool {
+        get {
+            clipsToBounds
+        }
+        set {
+            clipsToBounds = newValue
+        }
+    }
+}
+
+public extension 表示 {
+    var 前縁の錨: NSLayoutXAxisAnchor {
+        leadingAnchor
+    }
+    
+    var 後縁の錨: NSLayoutXAxisAnchor {
+        trailingAnchor
+    }
+    
+    var 左の錨: NSLayoutXAxisAnchor {
+        leftAnchor
+    }
+    
+    var 右の錨: NSLayoutXAxisAnchor {
+        rightAnchor
+    }
+    
+    var 上の錨: NSLayoutYAxisAnchor {
+        topAnchor
+    }
+    
+    var 下の錨: NSLayoutYAxisAnchor {
+        bottomAnchor
+    }
+    
+    var 横幅の錨: NSLayoutDimension {
+        widthAnchor
+    }
+    
+    var 高さの錨: NSLayoutDimension {
+        heightAnchor
+    }
+    
+    var 左右中心の錨: NSLayoutXAxisAnchor {
+        centerXAnchor
+    }
+    
+    var 上下中心の錨: NSLayoutYAxisAnchor {
+        centerYAnchor
+    }
+    
+    var 最初の基準線の錨: NSLayoutYAxisAnchor {
+        firstBaselineAnchor
+    }
+    
+    var 最後の基準線の錨: NSLayoutYAxisAnchor {
+        lastBaselineAnchor
+    }
 }
 
 public extension 表示 {
@@ -67,5 +184,55 @@ public extension 表示 {
     /// func removeFromSuperview()
     func 親から独立する() {
         self.removeFromSuperview()
+    }
+    
+    /// func layoutIfNeeded()
+    func もし必要ならレイアウト() {
+        self.layoutIfNeeded()
+    }
+    
+    ///  func setNeedsLayout()
+    func レイアウトが必要です() {
+        self.setNeedsLayout()
+    }
+    
+    ///  func layoutSubviews()
+    func 子供をレイアウト() {
+        self.layoutSubviews()
+    }
+    
+    /// func setNeedsDisplay()
+    func 表示が必要です() {
+        self.setNeedsDisplay()
+    }
+    
+    /// func setNeedsDisplay(_ rect: CGRect)
+    func 表示が必要です(_ 位置と大きさ: 位置と大きさ) {
+        self.setNeedsDisplay(位置と大きさ)
+    }
+    
+    /// func draw(_ rect: CGRect)
+    func 描画(_ 位置と大きさ: 位置と大きさ) {
+        self.draw(位置と大きさ)
+    }
+    
+    /// func updateConstraints()
+    func 制約を更新() {
+        self.updateConstraints()
+    }
+    
+    /// func updateConstraintsIfNeeded()
+    func 必要なら制約を更新() {
+        self.updateConstraints()
+    }
+    
+    /// func needsUpdateConstraints() -> Bool
+    func 制約の更新が必要か() -> Bool {
+        self.needsUpdateConstraints()
+    }
+    
+    /// func setNeedsUpdateConstraints()
+    func 制約の更新が必要です() {
+        self.setNeedsUpdateConstraints()
     }
 }

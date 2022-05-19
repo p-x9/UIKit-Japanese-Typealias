@@ -16,6 +16,10 @@ public typealias ナビゲーション表示制御機 = UINavigationController
 public typealias テーブル表示制御機 = UITableViewController
 public typealias コレクション表示制御機 = UICollectionViewController
 
+public typealias レイヤ = CALayer
+public typealias 形レイヤ = CAShapeLayer
+public typealias 文字レイヤ = CATextLayer
+
 public typealias 大きさ = CGSize
 public typealias 位置 = CGPoint
 public typealias 位置と大きさ = CGRect
