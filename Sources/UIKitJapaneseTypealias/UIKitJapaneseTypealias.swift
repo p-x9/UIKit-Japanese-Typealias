@@ -18,7 +18,7 @@ public typealias コレクション表示制御機 = UICollectionViewController
 
 public typealias 大きさ = CGSize
 public typealias 位置 = CGPoint
-public typealias 長方形 = CGRect
+public typealias 位置と大きさ = CGRect
 
 public typealias 反応機 = UIResponder
 
