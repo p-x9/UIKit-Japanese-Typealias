@@ -55,3 +55,10 @@ public typealias テーブル表示データ源事前取得 = UITableViewDataSou
 public typealias コレクション表示委任 = UICollectionViewDelegate
 public typealias コレクション表示データ源 = UICollectionViewDataSource
 public typealias コレクション表示データ源事前取得 = UICollectionViewDataSourcePrefetching
+
+/* Constraint */
+public typealias レイアウト制約 = NSLayoutConstraint
+public typealias レイアウト錨 = NSLayoutAnchor
+public typealias 横方向のレイアウト錨 = NSLayoutXAxisAnchor
+public typealias 縦方向のレイアウト錨 = NSLayoutYAxisAnchor
+public typealias 寸法のレイアウト錨 = NSLayoutDimension

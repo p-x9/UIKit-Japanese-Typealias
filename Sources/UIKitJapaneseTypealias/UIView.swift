@@ -10,7 +10,7 @@ import UIKit
 import FoundationJapaneseTypealias
 
 public extension 表示 {
-    var タグ: Int {
+    var タグ: 整数 {
         get {
             tag
         }
@@ -126,51 +126,51 @@ public extension 表示 {
 }
 
 public extension 表示 {
-    var 前縁の錨: NSLayoutXAxisAnchor {
+    var 前縁の錨: 横方向のレイアウト錨 {
         leadingAnchor
     }
     
-    var 後縁の錨: NSLayoutXAxisAnchor {
+    var 後縁の錨: 横方向のレイアウト錨 {
         trailingAnchor
     }
     
-    var 左の錨: NSLayoutXAxisAnchor {
+    var 左の錨: 横方向のレイアウト錨 {
         leftAnchor
     }
     
-    var 右の錨: NSLayoutXAxisAnchor {
+    var 右の錨: 横方向のレイアウト錨 {
         rightAnchor
     }
     
-    var 上の錨: NSLayoutYAxisAnchor {
+    var 上の錨: 縦方向のレイアウト錨 {
         topAnchor
     }
     
-    var 下の錨: NSLayoutYAxisAnchor {
+    var 下の錨: 縦方向のレイアウト錨 {
         bottomAnchor
     }
     
-    var 横幅の錨: NSLayoutDimension {
+    var 横幅の錨: 寸法のレイアウト錨 {
         widthAnchor
     }
     
-    var 高さの錨: NSLayoutDimension {
+    var 高さの錨: 寸法のレイアウト錨 {
         heightAnchor
     }
     
-    var 左右中心の錨: NSLayoutXAxisAnchor {
+    var 左右中心の錨: 横方向のレイアウト錨 {
         centerXAnchor
     }
     
-    var 上下中心の錨: NSLayoutYAxisAnchor {
+    var 上下中心の錨: 縦方向のレイアウト錨 {
         centerYAnchor
     }
     
-    var 最初の基準線の錨: NSLayoutYAxisAnchor {
+    var 最初の基準線の錨: 縦方向のレイアウト錨 {
         firstBaselineAnchor
     }
     
-    var 最後の基準線の錨: NSLayoutYAxisAnchor {
+    var 最後の基準線の錨: 縦方向のレイアウト錨 {
         lastBaselineAnchor
     }
 }
