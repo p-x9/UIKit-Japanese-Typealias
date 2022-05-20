@@ -62,3 +62,4 @@ public typealias レイアウト錨 = NSLayoutAnchor
 public typealias 横方向のレイアウト錨 = NSLayoutXAxisAnchor
 public typealias 縦方向のレイアウト錨 = NSLayoutYAxisAnchor
 public typealias 寸法のレイアウト錨 = NSLayoutDimension
+public typealias レイアウト優先度 = UILayoutPriority

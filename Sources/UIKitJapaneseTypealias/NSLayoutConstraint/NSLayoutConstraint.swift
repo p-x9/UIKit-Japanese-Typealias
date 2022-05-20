@@ -13,8 +13,9 @@ public extension レイアウト制約 {
     
     typealias 関係 = レイアウト制約.Relation
     typealias 属性 = レイアウト制約.Attribute
+    typealias 軸 = レイアウト制約.Axis
     
-    var 優先度: UILayoutPriority {
+    var 優先度: レイアウト優先度 {
         get {
             priority
         }
@@ -133,4 +134,9 @@ public extension レイアウト制約.属性 {
     static let 余白を含む上下中心 = Self.centerYWithinMargins
     
     static let 属性でない = Self.notAnAttribute
+}
+
+public extension レイアウト制約.軸 {
+    static let 縦 = Self.vertical
+    static let 横 = Self.horizontal
 }

@@ -123,6 +123,33 @@ public extension 表示 {
             clipsToBounds = newValue
         }
     }
+    
+    var ユーザイベントに反応するか: 真理値 {
+        get {
+            isUserInteractionEnabled
+        }
+        set {
+            isUserInteractionEnabled = newValue
+        }
+    }
+    
+    var 同時に複数のタッチイベントを受け取るか: 真理値 {
+        get {
+            isMultipleTouchEnabled
+        }
+        set {
+            isMultipleTouchEnabled = false
+        }
+    }
+    
+    var 自動サイズ調整用マスクをレイアウト制約に変換する: 真理値 {
+        get {
+            translatesAutoresizingMaskIntoConstraints
+        }
+        set {
+            translatesAutoresizingMaskIntoConstraints = newValue
+        }
+    }
 }
 
 public extension 表示 {
@@ -235,5 +262,21 @@ public extension 表示 {
     /// func setNeedsUpdateConstraints()
     func 制約の更新が必要です() {
         self.setNeedsUpdateConstraints()
+    }
+    
+    func 固有サイズより大きくなることを防ぐ優先度(軸: レイアウト制約.軸) -> レイアウト優先度 {
+        contentHuggingPriority(for: 軸)
+    }
+    
+    func 固有サイズより小さくなることを防ぐ優先度(軸: レイアウト制約.軸) -> レイアウト優先度 {
+        contentCompressionResistancePriority(for: 軸)
+    }
+    
+    func 固有サイズより大きくなることを防ぐ優先度を設定(_ 優先度: レイアウト優先度, 軸: レイアウト制約.軸)  {
+        setContentHuggingPriority(優先度, for: 軸)
+    }
+    
+    func 固有サイズより小さくなることを防ぐ優先度を設定(_ 優先度: レイアウト優先度, 軸: レイアウト制約.軸) {
+        setContentCompressionResistancePriority(優先度, for: 軸)
     }
 }
