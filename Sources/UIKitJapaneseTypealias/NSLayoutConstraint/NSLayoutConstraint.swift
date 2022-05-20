@@ -91,6 +91,16 @@ public extension レイアウト制約 {
     class func 無効化(_ 制約: [レイアウト制約]) {
         レイアウト制約.deactivate(制約)
     }
+    
+    convenience init(アイテム1 表示1: Any, 属性1: 属性,
+                     関係: 関係,
+                     アイテム2 表示2: Any?, 属性2: 属性,
+                     係数: CGFloat, ずれ: CGFloat) {
+        self.init(item: 表示1, attribute: 属性1,
+                     relatedBy: 関係,
+                     toItem: 表示2, attribute: 属性2,
+                     multiplier: 係数, constant: ずれ)
+    }
 }
 
 public extension レイアウト制約.関係 {
