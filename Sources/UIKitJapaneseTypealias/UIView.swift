@@ -280,3 +280,29 @@ public extension 表示 {
         setContentCompressionResistancePriority(優先度, for: 軸)
     }
 }
+
+public extension 表示 {
+    func 変換(_ 位置: 位置, 変換先の表示: 表示?) -> 位置 {
+        convert(位置, to: 変換先の表示)
+    }
+    
+    func 変換(_ 位置: 位置, 変換元の表示: 表示?) -> 位置 {
+        convert(位置, from: 変換元の表示)
+    }
+    
+    func 変換(_ 位置と大きさ: 位置と大きさ, 変換先の表示: 表示?) -> 位置と大きさ {
+        convert(位置と大きさ, to: 変換先の表示)
+    }
+    
+    func 変換(_ 位置と大きさ: 位置と大きさ, 変換元の表示: 表示?) -> 位置と大きさ {
+        convert(位置と大きさ, from: 変換元の表示)
+    }
+    
+    func 適した大きさ(次に対して 大きさ: 大きさ) -> 大きさ {
+        sizeThatFits(大きさ)
+    }
+    
+    func 適した大きさにリサイズ() {
+        sizeToFit()
+    }
+}
