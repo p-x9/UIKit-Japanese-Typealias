@@ -306,3 +306,38 @@ public extension 表示 {
         sizeToFit()
     }
 }
+
+public extension 表示 {
+    typealias アニメーションカーブ = AnimationCurve
+    typealias アニメーション遷移 = AnimationTransition
+    typealias アニメーションオプション = AnimationOptions
+}
+
+public extension 表示.アニメーションカーブ {
+    static let ゆっくり始まりゆっくり終わる: Self = .easeInOut
+    static let ゆっくり始まる: Self = .easeIn
+    static let ゆっくり終わる: Self = .easeOut
+    static let 線形: Self = .linear
+}
+
+public extension 表示.アニメーション遷移 {
+    static let なし: Self = .none
+    static let 左から反転: Self = .flipFromLeft
+    static let 右から反転: Self = .flipFromRight
+    static let 上に巻く: Self = .curlUp
+    static let 下に巻く: Self = .curlDown
+}
+
+extension 表示 {
+    class func アニメーション(期間: TimeInterval, 遅延: TimeInterval = 0, オプション: アニメーションオプション = [], アニメーション: @escaping () -> Void, 完了: ((真理値) -> Void)? = nil) {
+        表示.animate(withDuration: 期間, delay: 遅延, options: オプション, animations: アニメーション, completion: 完了)
+    }
+    
+    class func 遷移(表示: 表示, 期間: TimeInterval, オプション: アニメーションオプション = [], アニメーション: (() -> Void)?, 完了: ((真理値) -> Void)? = nil) {
+        Self.transition(with: 表示, duration: 期間, animations: アニメーション, completion: 完了)
+    }
+    
+    class func 遷移(元表示: 表示, 先表示: 表示, 期間: TimeInterval, オプション: アニメーションオプション = [], アニメーション: (() -> Void)?, 完了: ((真理値) -> Void)? = nil) {
+        Self.transition(from: 元表示, to: 先表示, duration: 期間, options: オプション, completion: 完了)
+    }
+}
