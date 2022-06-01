@@ -38,6 +38,9 @@ public typealias ボタン = UIButton
 public typealias 画像表示 = UIImageView
 public typealias テーブル表示 = UITableView
 public typealias コレクション表示 = UICollectionView
+public typealias スクロール表示 = UIScrollView
+
+public typealias バーボタンアイテム = UIBarButtonItem
 
 public typealias 色 = UIColor
 public typealias 画像 = UIImage
@@ -63,3 +66,14 @@ public typealias 横方向のレイアウト錨 = NSLayoutXAxisAnchor
 public typealias 縦方向のレイアウト錨 = NSLayoutYAxisAnchor
 public typealias 寸法のレイアウト錨 = NSLayoutDimension
 public typealias レイアウト優先度 = UILayoutPriority
+
+public typealias ストーリーボード = UIStoryboard
+public typealias ストーリーボードセグエ = UIStoryboardSegue
+
+public typealias モーダル遷移スタイル = UIModalTransitionStyle
+public typealias モーダル表示スタイル = UIModalPresentationStyle
+
+public typealias UIの向き = UIInterfaceOrientation
+public typealias 表示制御機が対応する画面の向き = UIInterfaceOrientationMask
+
+public typealias UIの特性集 = UITraitCollection
