@@ -10,7 +10,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "UIKitJapaneseTypealias",
-            targets: ["UIKitJapaneseTypealias"]),
+            targets: ["UIKitJapaneseTypealias", "UIKitJapaneseTypealiasObjc"]),
     ],
     dependencies: [
         .package(url: "https://github.com/p-x9/Foundation-Japanese-Typealias.git", branch: "main")
@@ -22,7 +22,13 @@ let package = Package(
             name: "UIKitJapaneseTypealias",
             dependencies: [
                 .product(name: "FoundationJapaneseTypealias", package: "Foundation-Japanese-Typealias")
-            ]),
+            ],
+            path: "Sources/UIKitJapaneseTypealias"),
+        .target(
+            name: "UIKitJapaneseTypealiasObjc",
+            dependencies: ["UIKitJapaneseTypealias"],
+            path: "Sources/UIKitJapaneseTypealiasObjc",
+            publicHeadersPath: ""),
         .testTarget(
             name: "UIKitJapaneseTypealiasTests",
             dependencies: ["UIKitJapaneseTypealias"]),
