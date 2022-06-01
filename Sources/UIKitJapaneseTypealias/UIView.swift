@@ -202,107 +202,117 @@ public extension 表示 {
     }
 }
 
-public extension 表示 {
+extension 表示 {
     /// func addSubview(_ view: UIView)
     /// - Parameter 子供: UIVIew
-    func 子供を追加(子供: 表示) {
+    public func 子供を追加(子供: 表示) {
         self.addSubview(子供)
     }
     
     /// func removeFromSuperview()
-    func 親から独立する() {
+    public func 親から独立する() {
         self.removeFromSuperview()
     }
     
     /// func layoutIfNeeded()
-    func もし必要ならレイアウト() {
+    public func もし必要ならレイアウト() {
         self.layoutIfNeeded()
     }
     
     ///  func setNeedsLayout()
-    func レイアウトが必要です() {
+    public func レイアウトが必要です() {
         self.setNeedsLayout()
     }
     
     ///  func layoutSubviews()
-    func 子供をレイアウト() {
-        self.layoutSubviews()
+    @objc
+    open func 子供をレイアウト() {
+        if Self.表示を日本語で全部書きたい {
+            self.子供をレイアウト()
+        } else {
+            self.layoutSubviews()
+        }
     }
     
     /// func setNeedsDisplay()
-    func 表示が必要です() {
+    public func 表示が必要です() {
         self.setNeedsDisplay()
     }
     
     /// func setNeedsDisplay(_ rect: CGRect)
-    func 表示が必要です(_ 位置と大きさ: 位置と大きさ) {
+    public func 表示が必要です(_ 位置と大きさ: 位置と大きさ) {
         self.setNeedsDisplay(位置と大きさ)
     }
     
     /// func draw(_ rect: CGRect)
-    func 描画(_ 位置と大きさ: 位置と大きさ) {
-        self.draw(位置と大きさ)
+    @objc
+    open func 描画(_ 位置と大きさ: 位置と大きさ) {
+        if Self.表示を日本語で全部書きたい {
+            self.描画(位置と大きさ)
+        } else {
+            self.draw(位置と大きさ)
+        }
     }
     
     /// func updateConstraints()
-    func 制約を更新() {
+    public func 制約を更新() {
         self.updateConstraints()
     }
     
     /// func updateConstraintsIfNeeded()
-    func 必要なら制約を更新() {
+    public func 必要なら制約を更新() {
         self.updateConstraints()
     }
     
     /// func needsUpdateConstraints() -> Bool
-    func 制約の更新が必要か() -> 真理値 {
+    public func 制約の更新が必要か() -> 真理値 {
         self.needsUpdateConstraints()
     }
     
     /// func setNeedsUpdateConstraints()
-    func 制約の更新が必要です() {
+    public func 制約の更新が必要です() {
         self.setNeedsUpdateConstraints()
     }
     
-    func 固有サイズより大きくなることを防ぐ優先度(軸: レイアウト制約.軸) -> レイアウト優先度 {
+    public func 固有サイズより大きくなることを防ぐ優先度(軸: レイアウト制約.軸) -> レイアウト優先度 {
         contentHuggingPriority(for: 軸)
     }
     
-    func 固有サイズより小さくなることを防ぐ優先度(軸: レイアウト制約.軸) -> レイアウト優先度 {
+    public func 固有サイズより小さくなることを防ぐ優先度(軸: レイアウト制約.軸) -> レイアウト優先度 {
         contentCompressionResistancePriority(for: 軸)
     }
     
-    func 固有サイズより大きくなることを防ぐ優先度を設定(_ 優先度: レイアウト優先度, 軸: レイアウト制約.軸)  {
+    public func 固有サイズより大きくなることを防ぐ優先度を設定(_ 優先度: レイアウト優先度, 軸: レイアウト制約.軸)  {
         setContentHuggingPriority(優先度, for: 軸)
     }
     
-    func 固有サイズより小さくなることを防ぐ優先度を設定(_ 優先度: レイアウト優先度, 軸: レイアウト制約.軸) {
+    public func 固有サイズより小さくなることを防ぐ優先度を設定(_ 優先度: レイアウト優先度, 軸: レイアウト制約.軸) {
         setContentCompressionResistancePriority(優先度, for: 軸)
     }
 }
 
-public extension 表示 {
-    func 変換(_ 位置: 位置, 変換先の表示: 表示?) -> 位置 {
+extension 表示 {
+    public func 変換(_ 位置: 位置, 変換先の表示: 表示?) -> 位置 {
         convert(位置, to: 変換先の表示)
     }
     
-    func 変換(_ 位置: 位置, 変換元の表示: 表示?) -> 位置 {
+    public func 変換(_ 位置: 位置, 変換元の表示: 表示?) -> 位置 {
         convert(位置, from: 変換元の表示)
     }
     
-    func 変換(_ 位置と大きさ: 位置と大きさ, 変換先の表示: 表示?) -> 位置と大きさ {
+    public func 変換(_ 位置と大きさ: 位置と大きさ, 変換先の表示: 表示?) -> 位置と大きさ {
         convert(位置と大きさ, to: 変換先の表示)
     }
     
-    func 変換(_ 位置と大きさ: 位置と大きさ, 変換元の表示: 表示?) -> 位置と大きさ {
+    public func 変換(_ 位置と大きさ: 位置と大きさ, 変換元の表示: 表示?) -> 位置と大きさ {
         convert(位置と大きさ, from: 変換元の表示)
     }
     
-    func 適した大きさ(次に対して 大きさ: 大きさ) -> 大きさ {
+    public func 適した大きさ(次に対して 大きさ: 大きさ) -> 大きさ {
         sizeThatFits(大きさ)
     }
     
-    func 適した大きさにリサイズ() {
+    public func 適した大きさにリサイズ() {
         sizeToFit()
     }
 }
@@ -329,15 +339,15 @@ public extension 表示.アニメーション遷移 {
 }
 
 extension 表示 {
-    class func アニメーション(期間: TimeInterval, 遅延: TimeInterval = 0, オプション: アニメーションオプション = [], アニメーション: @escaping () -> Void, 完了: ((真理値) -> Void)? = nil) {
+    class public func アニメーション(期間: TimeInterval, 遅延: TimeInterval = 0, オプション: アニメーションオプション = [], アニメーション: @escaping () -> Void, 完了: ((真理値) -> Void)? = nil) {
         表示.animate(withDuration: 期間, delay: 遅延, options: オプション, animations: アニメーション, completion: 完了)
     }
     
-    class func 遷移(表示: 表示, 期間: TimeInterval, オプション: アニメーションオプション = [], アニメーション: (() -> Void)?, 完了: ((真理値) -> Void)? = nil) {
+    class public func 遷移(表示: 表示, 期間: TimeInterval, オプション: アニメーションオプション = [], アニメーション: (() -> Void)?, 完了: ((真理値) -> Void)? = nil) {
         Self.transition(with: 表示, duration: 期間, animations: アニメーション, completion: 完了)
     }
     
-    class func 遷移(元表示: 表示, 先表示: 表示, 期間: TimeInterval, オプション: アニメーションオプション = [], アニメーション: (() -> Void)?, 完了: ((真理値) -> Void)? = nil) {
+    class public func 遷移(元表示: 表示, 先表示: 表示, 期間: TimeInterval, オプション: アニメーションオプション = [], アニメーション: (() -> Void)?, 完了: ((真理値) -> Void)? = nil) {
         Self.transition(from: 元表示, to: 先表示, duration: 期間, options: オプション, completion: 完了)
     }
 }
