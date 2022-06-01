@@ -127,12 +127,20 @@ extension 表示制御機 {
     
     @objc
     open var 対応している画面の向き: 表示制御機が対応する画面の向き {
-        supportedInterfaceOrientations
+        if Self.表示制御機を日本語で全部書きたい {
+            return self.対応している画面の向き
+        } else {
+            return supportedInterfaceOrientations
+        }
     }
     
     @objc
     open var 表示時に希望する画面の向き: UIの向き {
-        preferredInterfaceOrientationForPresentation
+        if Self.表示制御機を日本語で全部書きたい {
+            return self.表示時に希望する画面の向き
+        } else {
+            return preferredInterfaceOrientationForPresentation
+        }
     }
     
     @available(iOS, introduced: 2.0, deprecated: 8.0)
@@ -171,42 +179,74 @@ extension 表示制御機 {
     
     @objc
     open func 必要なら表示を読み込む() {
-        self.loadViewIfNeeded()
+        if Self.表示制御機を日本語で全部書きたい {
+            self.必要なら表示を読み込む()
+        } else {
+            self.loadViewIfNeeded()
+        }
     }
     
     @objc
     open func 表示が読み込まれた後() {
-        self.viewDidLoad()
+        if Self.表示制御機を日本語で全部書きたい {
+            self.表示が読み込まれた後()
+        } else {
+            self.viewDidLoad()
+        }
     }
     
     @objc
     open func 表示がこれから現れる(_ アニメーションと共に: 真理値) {
-        self.viewWillAppear(アニメーションと共に)
+        if Self.表示制御機を日本語で全部書きたい {
+            self.表示がこれから現れる(アニメーションと共に)
+        } else {
+            self.viewWillAppear(アニメーションと共に)
+        }
     }
     
     @objc
     open func 表示が現れた後(_ アニメーションと共に: 真理値) {
-        self.viewDidAppear(アニメーションと共に)
+        if Self.表示制御機を日本語で全部書きたい {
+            self.表示が現れた後(アニメーションと共に)
+        } else {
+            self.viewDidAppear(アニメーションと共に)
+        }
     }
     
     @objc
     open func 表示がこれから消える(_ アニメーションと共に: 真理値) {
-        self.viewWillDisappear(アニメーションと共に)
+        if Self.表示制御機を日本語で全部書きたい {
+            self.表示がこれから消える(アニメーションと共に)
+        } else {
+            self.viewWillDisappear(アニメーションと共に)
+        }
     }
     
     @objc
     open func 表示が消えた後(_ アニメーションと共に: 真理値) {
-        self.viewDidDisappear(アニメーションと共に)
+        if Self.表示制御機を日本語で全部書きたい {
+            self.表示が消えた後(アニメーションと共に)
+        } else {
+            self.viewDidDisappear(アニメーションと共に)
+        }
     }
     
     @objc
     open func 子供の表示がこれからレイアウトされる() {
-        self.viewWillLayoutSubviews()
+        if Self.表示制御機を日本語で全部書きたい {
+            self.子供の表示がこれからレイアウトされる()
+        } else {
+            self.viewWillLayoutSubviews()
+        }
     }
     
     @objc
     open func 子供の表示がレイアウトされた後() {
-        self.viewDidLayoutSubviews()
+        if Self.表示制御機を日本語で全部書きたい {
+            self.子供の表示がレイアウトされた後()
+        } else {
+            self.viewDidLayoutSubviews()
+        }
     }
     
     public func モーダル表示(_ 表示制御機: 表示制御機, アニメーションと共に: 真理値, 完了: (() -> Void)? = nil) {
@@ -249,17 +289,29 @@ extension 表示制御機 {
     
     @objc
     open func 表示(_ 表示制御機: 表示制御機, センダ: Any?) {
-        self.show(表示制御機, sender: センダ)
+        if Self.表示制御機を日本語で全部書きたい {
+            self.表示(表示制御機, センダ: センダ)
+        } else {
+            self.show(表示制御機, sender: センダ)
+        }
     }
     
     @objc
     open func 詳細を表示(_ 表示制御機: 表示制御機, センダ: Any?) {
-        self.showDetailViewController(表示制御機, sender: センダ)
+        if Self.表示制御機を日本語で全部書きたい {
+            self.詳細を表示(表示制御機, センダ: センダ)
+        } else {
+            self.showDetailViewController(表示制御機, sender: センダ)
+        }
     }
     
     @objc
     open func 編集中に設定(_ 編集中: 真理値, アニメーションと共に: 真理値) {
-        self.setEditing(編集中, animated: アニメーションと共に)
+        if Self.表示制御機を日本語で全部書きたい {
+            self.編集中に設定(編集中, アニメーションと共に: アニメーションと共に)
+        } else {
+            self.setEditing(編集中, animated: アニメーションと共に)
+        }
     }
     
     public func 子供を追加(_ 子供: 表示制御機) {
@@ -300,7 +352,11 @@ extension 表示制御機 {
     
     @objc
     open func 表示の制約を更新() {
-        self.updateViewConstraints()
+        if Self.表示制御機を日本語で全部書きたい {
+            self.表示の制約を更新()
+        } else {
+            self.updateViewConstraints()
+        }
     }
     
 }
