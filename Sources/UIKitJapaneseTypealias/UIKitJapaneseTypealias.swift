@@ -10,7 +10,7 @@ public typealias スクリーン = UIScreen
 public typealias シーン = UIScene
 
 public typealias ビュー = UIView
-public typealias 表示制御機 = UIViewController
+public typealias ビューコントローラ = UIViewController
 public typealias タブ表示制御機 = UITabBarController
 public typealias ナビゲーション表示制御機 = UINavigationController
 public typealias テーブル表示制御機 = UITableViewController
@@ -74,6 +74,6 @@ public typealias モーダル遷移スタイル = UIModalTransitionStyle
 public typealias モーダル表示スタイル = UIModalPresentationStyle
 
 public typealias UIの向き = UIInterfaceOrientation
-public typealias 表示制御機が対応する画面の向き = UIInterfaceOrientationMask
+public typealias ビューコントローラが対応する画面の向き = UIInterfaceOrientationMask
 
 public typealias UIの特性集 = UITraitCollection

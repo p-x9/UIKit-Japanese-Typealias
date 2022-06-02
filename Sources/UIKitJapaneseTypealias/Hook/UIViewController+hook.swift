@@ -8,13 +8,13 @@
 
 import UIKit
 
-extension 表示制御機 {
+extension ビューコントローラ {
     
-    static public var 表示制御機を日本語で全部書きたい = true
+    static public var ビューコントローラを日本語で全部書きたい = true
     
     @objc
     static public func japaneseTypealiasHook() {
-        guard Self.表示制御機を日本語で全部書きたい else{
+        guard Self.ビューコントローラを日本語で全部書きたい else{
             return
         }
         
