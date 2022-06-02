@@ -9,13 +9,13 @@
 import UIKit
 import ObjectiveC
 
-extension 表示 {
+extension ビュー {
     
-    static public var 表示を日本語で全部書きたい = true
+    static public var ビューを日本語で全部書きたい = true
     
     @objc
     static public func japaneseTypealiasHook() {
-        guard Self.表示を日本語で全部書きたい else{
+        guard Self.ビューを日本語で全部書きたい else{
             return
         }
         

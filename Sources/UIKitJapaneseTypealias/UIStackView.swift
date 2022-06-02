@@ -14,7 +14,7 @@ extension スタック表示 {
     public typealias 分布 = スタック表示.Distribution
     public typealias 整列 = スタック表示.Alignment
     
-    public var 並べられた子供: [表示] {
+    public var 並べられた子供: [ビュー] {
         arrangedSubviews
     }
     
@@ -74,26 +74,26 @@ extension スタック表示 {
 }
 
 extension スタック表示 {
-    public func 並べる子供を追加(_ 表示: 表示) {
-        addArrangedSubview(表示)
+    public func 並べる子供を追加(_ ビュー: ビュー) {
+        addArrangedSubview(ビュー)
     }
     
-    public func 並べられた子供を削除(_ 表示: 表示) {
-        removeArrangedSubview(表示)
+    public func 並べられた子供を削除(_ ビュー: ビュー) {
+        removeArrangedSubview(ビュー)
     }
     
-    public func 並べる子供を挿入(_ 表示: 表示, インデックス: Int) {
-        insertArrangedSubview(表示, at: インデックス)
-    }
-    
-    @available(iOS 11.0, *)
-    public func カスタム間隔を設定(_ 間隔: CGFloat, 次の表示の後 表示: 表示) {
-        setCustomSpacing(間隔, after: 表示)
+    public func 並べる子供を挿入(_ ビュー: ビュー, インデックス: Int) {
+        insertArrangedSubview(ビュー, at: インデックス)
     }
     
     @available(iOS 11.0, *)
-    public func カスタム間隔(次の表示の後 表示: 表示) -> CGFloat {
-        customSpacing(after: 表示)
+    public func カスタム間隔を設定(_ 間隔: CGFloat, 次のビューの後 ビュー: ビュー) {
+        setCustomSpacing(間隔, after: ビュー)
+    }
+    
+    @available(iOS 11.0, *)
+    public func カスタム間隔(次のビューの後 ビュー: ビュー) -> CGFloat {
+        customSpacing(after: ビュー)
     }
 }
 

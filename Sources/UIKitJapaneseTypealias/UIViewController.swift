@@ -10,7 +10,7 @@ import UIKit
 import FoundationJapaneseTypealias
 
 extension 表示制御機 {
-    public var 表示: 表示 {
+    public var ビュー: ビュー {
         get {
             view
         }
@@ -18,11 +18,11 @@ extension 表示制御機 {
             view = newValue
         }
     }
-    public var 既に読み込まれていた場合の表示: 表示? {
+    public var 既に読み込まれていた場合のビュー: ビュー? {
         viewIfLoaded
     }
     
-    public var 表示が読み込まれているか: 真理値 {
+    public var ビューが読み込まれているか: 真理値 {
         isViewLoaded
     }
     
@@ -169,81 +169,81 @@ extension 表示制御機 {
 extension 表示制御機 {
     
     @objc
-    open func 表示を読み込み() {
+    open func ビューを読み込み() {
         if Self.表示制御機を日本語で全部書きたい {
-            self.表示を読み込み()
+            self.ビューを読み込み()
         } else {
             self.loadView()
         }
     }
     
     @objc
-    open func 必要なら表示を読み込む() {
+    open func 必要ならビューを読み込む() {
         if Self.表示制御機を日本語で全部書きたい {
-            self.必要なら表示を読み込む()
+            self.必要ならビューを読み込む()
         } else {
             self.loadViewIfNeeded()
         }
     }
     
     @objc
-    open func 表示が読み込まれた後() {
+    open func ビューが読み込まれた後() {
         if Self.表示制御機を日本語で全部書きたい {
-            self.表示が読み込まれた後()
+            self.ビューが読み込まれた後()
         } else {
             self.viewDidLoad()
         }
     }
     
     @objc
-    open func 表示がこれから現れる(_ アニメーションと共に: 真理値) {
+    open func ビューがこれから現れる(_ アニメーションと共に: 真理値) {
         if Self.表示制御機を日本語で全部書きたい {
-            self.表示がこれから現れる(アニメーションと共に)
+            self.ビューがこれから現れる(アニメーションと共に)
         } else {
             self.viewWillAppear(アニメーションと共に)
         }
     }
     
     @objc
-    open func 表示が現れた後(_ アニメーションと共に: 真理値) {
+    open func ビューが現れた後(_ アニメーションと共に: 真理値) {
         if Self.表示制御機を日本語で全部書きたい {
-            self.表示が現れた後(アニメーションと共に)
+            self.ビューが現れた後(アニメーションと共に)
         } else {
             self.viewDidAppear(アニメーションと共に)
         }
     }
     
     @objc
-    open func 表示がこれから消える(_ アニメーションと共に: 真理値) {
+    open func ビューがこれから消える(_ アニメーションと共に: 真理値) {
         if Self.表示制御機を日本語で全部書きたい {
-            self.表示がこれから消える(アニメーションと共に)
+            self.ビューがこれから消える(アニメーションと共に)
         } else {
             self.viewWillDisappear(アニメーションと共に)
         }
     }
     
     @objc
-    open func 表示が消えた後(_ アニメーションと共に: 真理値) {
+    open func ビューが消えた後(_ アニメーションと共に: 真理値) {
         if Self.表示制御機を日本語で全部書きたい {
-            self.表示が消えた後(アニメーションと共に)
+            self.ビューが消えた後(アニメーションと共に)
         } else {
             self.viewDidDisappear(アニメーションと共に)
         }
     }
     
     @objc
-    open func 子供の表示がこれからレイアウトされる() {
+    open func 子供のビューがこれからレイアウトされる() {
         if Self.表示制御機を日本語で全部書きたい {
-            self.子供の表示がこれからレイアウトされる()
+            self.子供のビューがこれからレイアウトされる()
         } else {
             self.viewWillLayoutSubviews()
         }
     }
     
     @objc
-    open func 子供の表示がレイアウトされた後() {
+    open func 子供のビューがレイアウトされた後() {
         if Self.表示制御機を日本語で全部書きたい {
-            self.子供の表示がレイアウトされた後()
+            self.子供のビューがレイアウトされた後()
         } else {
             self.viewDidLayoutSubviews()
         }
@@ -322,8 +322,8 @@ extension 表示制御機 {
         self.removeFromParent()
     }
     
-    public func 遷移(元表示: 表示制御機, 先表示: 表示制御機, 期間: TimeInterval, オプション: 表示.アニメーションオプション = [], アニメーション: (() -> Void)?, 完了: ((真理値) -> Void)? = nil) {
-        self.transition(from: 元表示, to: 先表示, duration: 期間, options: オプション, animations: アニメーション, completion: 完了)
+    public func 遷移(元ビュー: 表示制御機, 先ビュー: 表示制御機, 期間: TimeInterval, オプション: ビュー.アニメーションオプション = [], アニメーション: (() -> Void)?, 完了: ((真理値) -> Void)? = nil) {
+        self.transition(from: 元ビュー, to: 先ビュー, duration: 期間, options: オプション, animations: アニメーション, completion: 完了)
     }
     
     public func 外観の遷移を始める(_ 現れようとしているか: 真理値, アニメーションと共に: 真理値) {
@@ -351,9 +351,9 @@ extension 表示制御機 {
     }
     
     @objc
-    open func 表示の制約を更新() {
+    open func ビューの制約を更新() {
         if Self.表示制御機を日本語で全部書きたい {
-            self.表示の制約を更新()
+            self.ビューの制約を更新()
         } else {
             self.updateViewConstraints()
         }

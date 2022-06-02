@@ -19,31 +19,31 @@ extension 表示制御機 {
         }
         
        /* loadView */
-        self.swizzle(orig: #selector(loadView), hooked: #selector(表示を読み込み))
+        self.swizzle(orig: #selector(loadView), hooked: #selector(ビューを読み込み))
         
         /* loadViewIfNeeded */
-        self.swizzle(orig: #selector(loadViewIfNeeded), hooked: #selector(必要なら表示を読み込む))
+        self.swizzle(orig: #selector(loadViewIfNeeded), hooked: #selector(必要ならビューを読み込む))
         
         /* viewDidLoad */
-        self.swizzle(orig: #selector(viewDidLoad), hooked: #selector(表示が読み込まれた後))
+        self.swizzle(orig: #selector(viewDidLoad), hooked: #selector(ビューが読み込まれた後))
         
         /* viewWillAppear(_ animated: Bool) */
-        self.swizzle(orig: #selector(viewWillAppear(_:)), hooked: #selector(表示がこれから現れる(_:)))
+        self.swizzle(orig: #selector(viewWillAppear(_:)), hooked: #selector(ビューがこれから現れる(_:)))
         
         /* viewDidAppear(_ animated: Bool) */
-        self.swizzle(orig: #selector(viewDidAppear(_:)), hooked: #selector(表示が現れた後(_:)))
+        self.swizzle(orig: #selector(viewDidAppear(_:)), hooked: #selector(ビューが現れた後(_:)))
         
         /* viewWillDisappear(_ animated: Bool) */
-        self.swizzle(orig: #selector(viewWillDisappear(_:)), hooked: #selector(表示がこれから消える(_:)))
+        self.swizzle(orig: #selector(viewWillDisappear(_:)), hooked: #selector(ビューがこれから消える(_:)))
         
         /* viewDidDisappear(_ animated: Bool) */
-        self.swizzle(orig: #selector(viewDidDisappear(_:)), hooked: #selector(表示が消えた後(_:)))
+        self.swizzle(orig: #selector(viewDidDisappear(_:)), hooked: #selector(ビューが消えた後(_:)))
         
         /* viewWillLayoutSubviews() */
-        self.swizzle(orig: #selector(viewWillLayoutSubviews), hooked: #selector(子供の表示がこれからレイアウトされる))
+        self.swizzle(orig: #selector(viewWillLayoutSubviews), hooked: #selector(子供のビューがこれからレイアウトされる))
         
         /* viewDidLayoutSubviews() */
-        self.swizzle(orig: #selector(viewDidLayoutSubviews), hooked: #selector(子供の表示がレイアウトされた後))
+        self.swizzle(orig: #selector(viewDidLayoutSubviews), hooked: #selector(子供のビューがレイアウトされた後))
         
         /* show(_ vc: UIViewController, sender: Any?) */
         self.swizzle(orig: #selector(show(_:sender:)), hooked: #selector(表示(_:センダ:)))
@@ -55,7 +55,7 @@ extension 表示制御機 {
         self.swizzle(orig: #selector(setEditing(_:animated:)), hooked: #selector(編集中に設定(_:アニメーションと共に:)))
         
         /* updateViewConstraints() */
-        self.swizzle(orig: #selector(updateViewConstraints), hooked: #selector(表示の制約を更新))
+        self.swizzle(orig: #selector(updateViewConstraints), hooked: #selector(ビューの制約を更新))
         
         
         /* supportedInterfaceOrientations */

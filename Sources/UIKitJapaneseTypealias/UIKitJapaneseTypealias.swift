@@ -9,7 +9,7 @@ public typealias 窓 = UIWindow
 public typealias スクリーン = UIScreen
 public typealias シーン = UIScene
 
-public typealias 表示 = UIView
+public typealias ビュー = UIView
 public typealias 表示制御機 = UIViewController
 public typealias タブ表示制御機 = UITabBarController
 public typealias ナビゲーション表示制御機 = UINavigationController
