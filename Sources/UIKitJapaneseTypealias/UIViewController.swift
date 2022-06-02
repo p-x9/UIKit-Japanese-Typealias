@@ -9,8 +9,8 @@
 import UIKit
 import FoundationJapaneseTypealias
 
-extension 表示制御機 {
-    public var 表示: 表示 {
+extension ビューコントローラ {
+    public var ビュー: ビュー {
         get {
             view
         }
@@ -18,11 +18,11 @@ extension 表示制御機 {
             view = newValue
         }
     }
-    public var 既に読み込まれていた場合の表示: 表示? {
+    public var 既に読み込まれていた場合のビュー: ビュー? {
         viewIfLoaded
     }
     
-    public var 表示が読み込まれているか: 真理値 {
+    public var ビューが読み込まれているか: 真理値 {
         isViewLoaded
     }
     
@@ -47,15 +47,15 @@ extension 表示制御機 {
         }
     }
     
-    public var 親: 表示制御機? {
+    public var 親: ビューコントローラ? {
         parent
     }
     
-    public var モーダル表示している表示制御機: 表示制御機? {
+    public var モーダル表示しているビューコントローラ: ビューコントローラ? {
         presentedViewController
     }
     
-    public var 自分をモーダル表示している表示制御機: 表示制御機? {
+    public var 自分をモーダル表示しているビューコントローラ: ビューコントローラ? {
         presentingViewController
     }
     
@@ -126,8 +126,8 @@ extension 表示制御機 {
     }
     
     @objc
-    open var 対応している画面の向き: 表示制御機が対応する画面の向き {
-        if Self.表示制御機を日本語で全部書きたい {
+    open var 対応している画面の向き: ビューコントローラが対応する画面の向き {
+        if Self.ビューコントローラを日本語で全部書きたい {
             return self.対応している画面の向き
         } else {
             return supportedInterfaceOrientations
@@ -136,7 +136,7 @@ extension 表示制御機 {
     
     @objc
     open var 表示時に希望する画面の向き: UIの向き {
-        if Self.表示制御機を日本語で全部書きたい {
+        if Self.ビューコントローラを日本語で全部書きたい {
             return self.表示時に希望する画面の向き
         } else {
             return preferredInterfaceOrientationForPresentation
@@ -161,96 +161,96 @@ extension 表示制御機 {
         editButtonItem
     }
     
-    public var 子供たち: [表示制御機] {
+    public var 子供たち: [ビューコントローラ] {
         children
     }
     
 }
-extension 表示制御機 {
+extension ビューコントローラ {
     
     @objc
-    open func 表示を読み込み() {
-        if Self.表示制御機を日本語で全部書きたい {
-            self.表示を読み込み()
+    open func ビューを読み込み() {
+        if Self.ビューコントローラを日本語で全部書きたい {
+            self.ビューを読み込み()
         } else {
             self.loadView()
         }
     }
     
     @objc
-    open func 必要なら表示を読み込む() {
-        if Self.表示制御機を日本語で全部書きたい {
-            self.必要なら表示を読み込む()
+    open func 必要ならビューを読み込む() {
+        if Self.ビューコントローラを日本語で全部書きたい {
+            self.必要ならビューを読み込む()
         } else {
             self.loadViewIfNeeded()
         }
     }
     
     @objc
-    open func 表示が読み込まれた後() {
-        if Self.表示制御機を日本語で全部書きたい {
-            self.表示が読み込まれた後()
+    open func ビューが読み込まれた後() {
+        if Self.ビューコントローラを日本語で全部書きたい {
+            self.ビューが読み込まれた後()
         } else {
             self.viewDidLoad()
         }
     }
     
     @objc
-    open func 表示がこれから現れる(_ アニメーションと共に: 真理値) {
-        if Self.表示制御機を日本語で全部書きたい {
-            self.表示がこれから現れる(アニメーションと共に)
+    open func ビューがこれから現れる(_ アニメーションと共に: 真理値) {
+        if Self.ビューコントローラを日本語で全部書きたい {
+            self.ビューがこれから現れる(アニメーションと共に)
         } else {
             self.viewWillAppear(アニメーションと共に)
         }
     }
     
     @objc
-    open func 表示が現れた後(_ アニメーションと共に: 真理値) {
-        if Self.表示制御機を日本語で全部書きたい {
-            self.表示が現れた後(アニメーションと共に)
+    open func ビューが現れた後(_ アニメーションと共に: 真理値) {
+        if Self.ビューコントローラを日本語で全部書きたい {
+            self.ビューが現れた後(アニメーションと共に)
         } else {
             self.viewDidAppear(アニメーションと共に)
         }
     }
     
     @objc
-    open func 表示がこれから消える(_ アニメーションと共に: 真理値) {
-        if Self.表示制御機を日本語で全部書きたい {
-            self.表示がこれから消える(アニメーションと共に)
+    open func ビューがこれから消える(_ アニメーションと共に: 真理値) {
+        if Self.ビューコントローラを日本語で全部書きたい {
+            self.ビューがこれから消える(アニメーションと共に)
         } else {
             self.viewWillDisappear(アニメーションと共に)
         }
     }
     
     @objc
-    open func 表示が消えた後(_ アニメーションと共に: 真理値) {
-        if Self.表示制御機を日本語で全部書きたい {
-            self.表示が消えた後(アニメーションと共に)
+    open func ビューが消えた後(_ アニメーションと共に: 真理値) {
+        if Self.ビューコントローラを日本語で全部書きたい {
+            self.ビューが消えた後(アニメーションと共に)
         } else {
             self.viewDidDisappear(アニメーションと共に)
         }
     }
     
     @objc
-    open func 子供の表示がこれからレイアウトされる() {
-        if Self.表示制御機を日本語で全部書きたい {
-            self.子供の表示がこれからレイアウトされる()
+    open func 子供のビューがこれからレイアウトされる() {
+        if Self.ビューコントローラを日本語で全部書きたい {
+            self.子供のビューがこれからレイアウトされる()
         } else {
             self.viewWillLayoutSubviews()
         }
     }
     
     @objc
-    open func 子供の表示がレイアウトされた後() {
-        if Self.表示制御機を日本語で全部書きたい {
-            self.子供の表示がレイアウトされた後()
+    open func 子供のビューがレイアウトされた後() {
+        if Self.ビューコントローラを日本語で全部書きたい {
+            self.子供のビューがレイアウトされた後()
         } else {
             self.viewDidLayoutSubviews()
         }
     }
     
-    public func モーダル表示(_ 表示制御機: 表示制御機, アニメーションと共に: 真理値, 完了: (() -> Void)? = nil) {
-        self.present(表示制御機, animated: アニメーションと共に, completion: 完了)
+    public func モーダル表示(_ ビューコントローラ: ビューコントローラ, アニメーションと共に: 真理値, 完了: (() -> Void)? = nil) {
+        self.present(ビューコントローラ, animated: アニメーションと共に, completion: 完了)
     }
     
     public func モーダルを閉じる(アニメーションと共に: 真理値, 完了: (() -> Void)? = nil) {
@@ -270,12 +270,12 @@ extension 表示制御機 {
     }
     
     @available(iOS 15.0, *)
-    public func コンテンツのスクロール表示を設定(_ スクロール表示: スクロール表示?, エッジ: NSDirectionalRectEdge) {
-        self.setContentScrollView(スクロール表示, for: エッジ)
+    public func コンテンツのスクロールビューを設定(_ スクロールビュー: スクロールビュー?, エッジ: NSDirectionalRectEdge) {
+        self.setContentScrollView(スクロールビュー, for: エッジ)
     }
     
     @available(iOS 15.0, *)
-    public func コンテンツのスクロール表示(エッジ: NSDirectionalRectEdge) -> スクロール表示? {
+    public func コンテンツのスクロールビュー(エッジ: NSDirectionalRectEdge) -> スクロールビュー? {
         self.contentScrollView(for: エッジ)
     }
     
@@ -283,38 +283,38 @@ extension 表示制御機 {
         self.setNeedsStatusBarAppearanceUpdate()
     }
     
-    public func アクションを処理する表示制御機(アクション: Selector, センダ: Any?) -> 表示制御機? {
+    public func アクションを処理するビューコントローラ(アクション: Selector, センダ: Any?) -> ビューコントローラ? {
         targetViewController(forAction: アクション, sender: センダ)
     }
     
     @objc
-    open func 表示(_ 表示制御機: 表示制御機, センダ: Any?) {
-        if Self.表示制御機を日本語で全部書きたい {
-            self.表示(表示制御機, センダ: センダ)
+    open func 表示(_ ビューコントローラ: ビューコントローラ, センダ: Any?) {
+        if Self.ビューコントローラを日本語で全部書きたい {
+            self.表示(ビューコントローラ, センダ: センダ)
         } else {
-            self.show(表示制御機, sender: センダ)
+            self.show(ビューコントローラ, sender: センダ)
         }
     }
     
     @objc
-    open func 詳細を表示(_ 表示制御機: 表示制御機, センダ: Any?) {
-        if Self.表示制御機を日本語で全部書きたい {
-            self.詳細を表示(表示制御機, センダ: センダ)
+    open func 詳細を表示(_ ビューコントローラ: ビューコントローラ, センダ: Any?) {
+        if Self.ビューコントローラを日本語で全部書きたい {
+            self.詳細を表示(ビューコントローラ, センダ: センダ)
         } else {
-            self.showDetailViewController(表示制御機, sender: センダ)
+            self.showDetailViewController(ビューコントローラ, sender: センダ)
         }
     }
     
     @objc
     open func 編集中に設定(_ 編集中: 真理値, アニメーションと共に: 真理値) {
-        if Self.表示制御機を日本語で全部書きたい {
+        if Self.ビューコントローラを日本語で全部書きたい {
             self.編集中に設定(編集中, アニメーションと共に: アニメーションと共に)
         } else {
             self.setEditing(編集中, animated: アニメーションと共に)
         }
     }
     
-    public func 子供を追加(_ 子供: 表示制御機) {
+    public func 子供を追加(_ 子供: ビューコントローラ) {
         self.addChild(子供)
     }
     
@@ -322,8 +322,8 @@ extension 表示制御機 {
         self.removeFromParent()
     }
     
-    public func 遷移(元表示: 表示制御機, 先表示: 表示制御機, 期間: TimeInterval, オプション: 表示.アニメーションオプション = [], アニメーション: (() -> Void)?, 完了: ((真理値) -> Void)? = nil) {
-        self.transition(from: 元表示, to: 先表示, duration: 期間, options: オプション, animations: アニメーション, completion: 完了)
+    public func 遷移(元ビュー: ビューコントローラ, 先ビュー: ビューコントローラ, 期間: TimeInterval, オプション: ビュー.アニメーションオプション = [], アニメーション: (() -> Void)?, 完了: ((真理値) -> Void)? = nil) {
+        self.transition(from: 元ビュー, to: 先ビュー, duration: 期間, options: オプション, animations: アニメーション, completion: 完了)
     }
     
     public func 外観の遷移を始める(_ 現れようとしているか: 真理値, アニメーションと共に: 真理値) {
@@ -334,26 +334,26 @@ extension 表示制御機 {
         self.endAppearanceTransition()
     }
     
-    public func 子供のUIの特性集の上書きを設定(_ 特性集: UIの特性集?, 子供: 表示制御機) {
+    public func 子供のUIの特性集の上書きを設定(_ 特性集: UIの特性集?, 子供: ビューコントローラ) {
         self.setOverrideTraitCollection(特性集, forChild: 子供)
     }
     
-    public func 子供の上書きされたUI特性集(子供: 表示制御機) -> UIの特性集? {
+    public func 子供の上書きされたUI特性集(子供: ビューコントローラ) -> UIの特性集? {
         self.overrideTraitCollection(forChild: 子供)
     }
     
-    public func これから親へ移動(親: 表示制御機?) {
+    public func これから親へ移動(親: ビューコントローラ?) {
         self.willMove(toParent: 親)
     }
     
-    public func 親へ移動した後(親: 表示制御機?) {
+    public func 親へ移動した後(親: ビューコントローラ?) {
         self.didMove(toParent: 親)
     }
     
     @objc
-    open func 表示の制約を更新() {
-        if Self.表示制御機を日本語で全部書きたい {
-            self.表示の制約を更新()
+    open func ビューの制約を更新() {
+        if Self.ビューコントローラを日本語で全部書きたい {
+            self.ビューの制約を更新()
         } else {
             self.updateViewConstraints()
         }

@@ -9,7 +9,7 @@
 import UIKit
 import FoundationJapaneseTypealias
 
-public extension 表示 {
+public extension ビュー {
     var タグ: 整数 {
         get {
             tag
@@ -71,15 +71,15 @@ public extension 表示 {
         self.window
     }
     
-    var 親表示: 表示? {
+    var 親ビュー: ビュー? {
         self.superview
     }
     
-    var 子表示たち: [表示] {
+    var 子ビューたち: [ビュー] {
         self.subviews
     }
     
-    var マスク: 表示? {
+    var マスク: ビュー? {
         get {
             mask
         }
@@ -152,7 +152,7 @@ public extension 表示 {
     }
 }
 
-public extension 表示 {
+public extension ビュー {
     var 前縁の錨: 横方向のレイアウト錨 {
         leadingAnchor
     }
@@ -202,10 +202,10 @@ public extension 表示 {
     }
 }
 
-extension 表示 {
+extension ビュー {
     /// func addSubview(_ view: UIView)
     /// - Parameter 子供: UIVIew
-    public func 子供を追加(子供: 表示) {
+    public func 子供を追加(子供: ビュー) {
         self.addSubview(子供)
     }
     
@@ -227,7 +227,7 @@ extension 表示 {
     ///  func layoutSubviews()
     @objc
     open func 子供をレイアウト() {
-        if Self.表示を日本語で全部書きたい {
+        if Self.ビューを日本語で全部書きたい {
             self.子供をレイアウト()
         } else {
             self.layoutSubviews()
@@ -247,7 +247,7 @@ extension 表示 {
     /// func draw(_ rect: CGRect)
     @objc
     open func 描画(_ 位置と大きさ: 位置と大きさ) {
-        if Self.表示を日本語で全部書きたい {
+        if Self.ビューを日本語で全部書きたい {
             self.描画(位置と大きさ)
         } else {
             self.draw(位置と大きさ)
@@ -291,21 +291,21 @@ extension 表示 {
     }
 }
 
-extension 表示 {
-    public func 変換(_ 位置: 位置, 変換先の表示: 表示?) -> 位置 {
-        convert(位置, to: 変換先の表示)
+extension ビュー {
+    public func 変換(_ 位置: 位置, 変換先のビュー: ビュー?) -> 位置 {
+        convert(位置, to: 変換先のビュー)
     }
     
-    public func 変換(_ 位置: 位置, 変換元の表示: 表示?) -> 位置 {
-        convert(位置, from: 変換元の表示)
+    public func 変換(_ 位置: 位置, 変換元のビュー: ビュー?) -> 位置 {
+        convert(位置, from: 変換元のビュー)
     }
     
-    public func 変換(_ 位置と大きさ: 位置と大きさ, 変換先の表示: 表示?) -> 位置と大きさ {
-        convert(位置と大きさ, to: 変換先の表示)
+    public func 変換(_ 位置と大きさ: 位置と大きさ, 変換先のビュー: ビュー?) -> 位置と大きさ {
+        convert(位置と大きさ, to: 変換先のビュー)
     }
     
-    public func 変換(_ 位置と大きさ: 位置と大きさ, 変換元の表示: 表示?) -> 位置と大きさ {
-        convert(位置と大きさ, from: 変換元の表示)
+    public func 変換(_ 位置と大きさ: 位置と大きさ, 変換元のビュー: ビュー?) -> 位置と大きさ {
+        convert(位置と大きさ, from: 変換元のビュー)
     }
     
     public func 適した大きさ(次に対して 大きさ: 大きさ) -> 大きさ {
@@ -317,20 +317,20 @@ extension 表示 {
     }
 }
 
-public extension 表示 {
+public extension ビュー {
     typealias アニメーションカーブ = AnimationCurve
     typealias アニメーション遷移 = AnimationTransition
     typealias アニメーションオプション = AnimationOptions
 }
 
-public extension 表示.アニメーションカーブ {
+public extension ビュー.アニメーションカーブ {
     static let ゆっくり始まりゆっくり終わる: Self = .easeInOut
     static let ゆっくり始まる: Self = .easeIn
     static let ゆっくり終わる: Self = .easeOut
     static let 線形: Self = .linear
 }
 
-public extension 表示.アニメーション遷移 {
+public extension ビュー.アニメーション遷移 {
     static let なし: Self = .none
     static let 左から反転: Self = .flipFromLeft
     static let 右から反転: Self = .flipFromRight
@@ -338,16 +338,16 @@ public extension 表示.アニメーション遷移 {
     static let 下に巻く: Self = .curlDown
 }
 
-extension 表示 {
+extension ビュー {
     class public func アニメーション(期間: TimeInterval, 遅延: TimeInterval = 0, オプション: アニメーションオプション = [], アニメーション: @escaping () -> Void, 完了: ((真理値) -> Void)? = nil) {
-        表示.animate(withDuration: 期間, delay: 遅延, options: オプション, animations: アニメーション, completion: 完了)
+        ビュー.animate(withDuration: 期間, delay: 遅延, options: オプション, animations: アニメーション, completion: 完了)
     }
     
-    class public func 遷移(表示: 表示, 期間: TimeInterval, オプション: アニメーションオプション = [], アニメーション: (() -> Void)?, 完了: ((真理値) -> Void)? = nil) {
-        Self.transition(with: 表示, duration: 期間, animations: アニメーション, completion: 完了)
+    class public func 遷移(ビュー: ビュー, 期間: TimeInterval, オプション: アニメーションオプション = [], アニメーション: (() -> Void)?, 完了: ((真理値) -> Void)? = nil) {
+        Self.transition(with: ビュー, duration: 期間, animations: アニメーション, completion: 完了)
     }
     
-    class public func 遷移(元表示: 表示, 先表示: 表示, 期間: TimeInterval, オプション: アニメーションオプション = [], アニメーション: (() -> Void)?, 完了: ((真理値) -> Void)? = nil) {
-        Self.transition(from: 元表示, to: 先表示, duration: 期間, options: オプション, completion: 完了)
+    class public func 遷移(元ビュー: ビュー, 先ビュー: ビュー, 期間: TimeInterval, オプション: アニメーションオプション = [], アニメーション: (() -> Void)?, 完了: ((真理値) -> Void)? = nil) {
+        Self.transition(from: 元ビュー, to: 先ビュー, duration: 期間, options: オプション, completion: 完了)
     }
 }
