@@ -11,10 +11,10 @@ public typealias シーン = UIScene
 
 public typealias ビュー = UIView
 public typealias ビューコントローラ = UIViewController
-public typealias タブ表示制御機 = UITabBarController
-public typealias ナビゲーション表示制御機 = UINavigationController
-public typealias テーブル表示制御機 = UITableViewController
-public typealias コレクション表示制御機 = UICollectionViewController
+public typealias タブビューコントローラ = UITabBarController
+public typealias ナビゲーションビューコントローラ = UINavigationController
+public typealias テーブルビューコントローラ = UITableViewController
+public typealias コレクションビューコントローラ = UICollectionViewController
 
 public typealias レイヤ = CALayer
 public typealias 形レイヤ = CAShapeLayer
