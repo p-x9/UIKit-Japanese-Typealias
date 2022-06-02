@@ -167,5 +167,5 @@ public extension 色 {
     class var 暗い文字列: 色 { .darkText }
     
     @available(iOS, introduced: 2.0, deprecated: 13.0)
-    class var グループ化されたテーブル表示の背景: 色 { .groupTableViewBackground }
+    class var グループ化されたテーブルビューの背景: 色 { .groupTableViewBackground }
 }

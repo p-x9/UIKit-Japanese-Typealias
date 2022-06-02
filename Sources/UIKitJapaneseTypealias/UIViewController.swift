@@ -270,12 +270,12 @@ extension 表示制御機 {
     }
     
     @available(iOS 15.0, *)
-    public func コンテンツのスクロール表示を設定(_ スクロール表示: スクロール表示?, エッジ: NSDirectionalRectEdge) {
-        self.setContentScrollView(スクロール表示, for: エッジ)
+    public func コンテンツのスクロールビューを設定(_ スクロールビュー: スクロールビュー?, エッジ: NSDirectionalRectEdge) {
+        self.setContentScrollView(スクロールビュー, for: エッジ)
     }
     
     @available(iOS 15.0, *)
-    public func コンテンツのスクロール表示(エッジ: NSDirectionalRectEdge) -> スクロール表示? {
+    public func コンテンツのスクロールビュー(エッジ: NSDirectionalRectEdge) -> スクロールビュー? {
         self.contentScrollView(for: エッジ)
     }
     

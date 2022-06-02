@@ -9,10 +9,10 @@
 import UIKit
 import FoundationJapaneseTypealias
 
-extension スタック表示 {
+extension スタックビュー {
     
-    public typealias 分布 = スタック表示.Distribution
-    public typealias 整列 = スタック表示.Alignment
+    public typealias 分布 = スタックビュー.Distribution
+    public typealias 整列 = スタックビュー.Alignment
     
     public var 並べられた子供: [ビュー] {
         arrangedSubviews
@@ -73,7 +73,7 @@ extension スタック表示 {
     }
 }
 
-extension スタック表示 {
+extension スタックビュー {
     public func 並べる子供を追加(_ ビュー: ビュー) {
         addArrangedSubview(ビュー)
     }
@@ -97,7 +97,7 @@ extension スタック表示 {
     }
 }
 
-public extension スタック表示.分布 {
+public extension スタックビュー.分布 {
     static var 埋める: Self {
         .fill
     }
@@ -115,7 +115,7 @@ public extension スタック表示.分布 {
     }
 }
 
-public extension スタック表示.整列 {
+public extension スタックビュー.整列 {
     static var 埋める: Self {
         .fill
     }
