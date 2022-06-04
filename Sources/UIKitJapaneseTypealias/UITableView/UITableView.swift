@@ -29,7 +29,7 @@ extension テーブルビュー {
     
     public var 委譲: テーブルビュー委譲? {
         get {
-            delegate
+            delegate as? テーブルビュー委譲
         }
         set {
             delegate = newValue
@@ -466,6 +466,7 @@ extension テーブルビュー {
         scrollToNearestSelectedRow(at: 位置, animated: アニメーションと共に)
     }
     
+    @available(iOS 11.0, *)
     public func バッチ更新する(_ 更新: (() -> Void)?, 完了: ((Bool) -> Void)? = nil) {
         performBatchUpdates(更新, completion: 完了)
     }
