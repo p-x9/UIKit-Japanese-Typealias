@@ -37,6 +37,8 @@ public typealias スタックビュー = UIStackView
 public typealias ボタン = UIButton
 public typealias 画像ビュー = UIImageView
 public typealias テーブルビュー = UITableView
+public typealias テーブルビューセル = UITableViewCell
+public typealias テーブルビューヘッダフッタビュー = UITableViewHeaderFooterView
 public typealias コレクションビュー = UICollectionView
 public typealias スクロールビュー = UIScrollView
 
@@ -50,9 +52,11 @@ public typealias イベント = UIEvent
 public typealias アクション = UIAction
 
 /* UITableView */
-public typealias テーブルビュー委任 = UITableViewDelegate
-public typealias テーブルビューデータ源 = UITableViewDataSource
-public typealias テーブルビューデータ源事前取得 = UITableViewDataSourcePrefetching
+public typealias テーブルビュー委譲 = UITableViewDelegate
+public typealias テーブルビューデータソース = UITableViewDataSource
+public typealias テーブルビューデータソース事前取得 = UITableViewDataSourcePrefetching
+public typealias テーブルビュードラッグ委譲 = UITableViewDragDelegate
+public typealias テーブルビュードロップ委譲 = UITableViewDropDelegate
 
 /* UICollectionView */
 public typealias コレクションビュー委任 = UICollectionViewDelegate
@@ -77,3 +81,9 @@ public typealias UIの向き = UIInterfaceOrientation
 public typealias ビューコントローラが対応する画面の向き = UIInterfaceOrientationMask
 
 public typealias UIの特性集 = UITraitCollection
+
+public typealias エッジインセット = UIEdgeInsets
+
+public typealias 視覚エフェクト = UIVisualEffect
+
+public typealias コンテキストメニューインタラクション = UIContextMenuInteraction
