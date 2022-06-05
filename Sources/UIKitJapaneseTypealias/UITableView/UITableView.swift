@@ -20,7 +20,7 @@ extension テーブルビュー {
     
     public var データソース: テーブルビューデータソース? {
         get {
-            dataSource
+            dataSource as? テーブルビューデータソース
         }
         set {
             dataSource = newValue
