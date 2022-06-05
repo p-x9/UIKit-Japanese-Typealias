@@ -53,7 +53,7 @@ public typealias アクション = UIAction
 
 /* UITableView */
 //public typealias テーブルビュー委譲 = UITableViewDelegate
-public typealias テーブルビューデータソース = UITableViewDataSource
+//public typealias テーブルビューデータソース = UITableViewDataSource
 public typealias テーブルビューデータソース事前取得 = UITableViewDataSourcePrefetching
 public typealias テーブルビュードラッグ委譲 = UITableViewDragDelegate
 public typealias テーブルビュードロップ委譲 = UITableViewDropDelegate
