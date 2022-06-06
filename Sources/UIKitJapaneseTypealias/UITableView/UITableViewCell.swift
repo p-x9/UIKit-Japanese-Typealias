@@ -279,28 +279,59 @@ extension テーブルビューセル {
         setNeedsUpdateConfiguration()
     }
     
-    public func 再利用の準備() {
-        prepareForReuse()
+    @objc
+    open func 再利用の準備() {
+        if Self.テーブルビューセルを日本語で全部書きたい {
+            再利用の準備()
+        } else {
+            prepareForReuse()
+        }
     }
     
-    public func 選択を設定(_ 選択されているか: 真理値, アニメーションと共に: 真理値) {
-        setSelected(選択されているか, animated: アニメーションと共に)
+    @objc
+    open func 選択を設定(_ 選択されているか: 真理値, アニメーションと共に: 真理値) {
+        
+        if Self.テーブルビューセルを日本語で全部書きたい {
+            選択を設定(選択されているか, アニメーションと共に: アニメーションと共に)
+        } else {
+            setSelected(選択されているか, animated: アニメーションと共に)
+        }
     }
     
-    public func ハイライトを設定(_ ハイライトされているか: 真理値, アニメーションと共に: 真理値) {
-        setHighlighted(ハイライトされているか, animated: アニメーションと共に)
+    @objc
+    open func ハイライトを設定(_ ハイライトされているか: 真理値, アニメーションと共に: 真理値) {
+        if Self.テーブルビューセルを日本語で全部書きたい {
+            ハイライトを設定(ハイライトされているか, アニメーションと共に: アニメーションと共に)
+        } else {
+            setHighlighted(ハイライトされているか, animated: アニメーションと共に)
+        }
     }
     
-    public func 編集中を設定(_ 編集中か: 真理値, アニメーションと共に: 真理値) {
-        setEditing(編集中か, animated: アニメーションと共に)
+    @objc
+    open func 編集中を設定(_ 編集中か: 真理値, アニメーションと共に: 真理値) {
+        if Self.テーブルビューセルを日本語で全部書きたい {
+            編集中を設定(編集中か, アニメーションと共に: アニメーションと共に)
+        } else {
+            setEditing(編集中か, animated: アニメーションと共に)
+        }
     }
     
-    public func 遷移前(次の状態に 状態: UITableViewCell.StateMask) {
-        willTransition(to: 状態)
+    @objc
+    open func 遷移前(次の状態に 状態: UITableViewCell.StateMask) {
+        if Self.テーブルビューセルを日本語で全部書きたい {
+            遷移前(次の状態に: 状態)
+        } else {
+            willTransition(to: 状態)
+        }
     }
     
-    public func 遷移後(次の状態に 状態: UITableViewCell.StateMask) {
-        didTransition(to: 状態)
+    @objc
+    open func 遷移後(次の状態に 状態: UITableViewCell.StateMask) {
+        if Self.テーブルビューセルを日本語で全部書きたい {
+            遷移後(次の状態に: 状態)
+        } else {
+            didTransition(to: 状態)
+        }
     }
     
     public func ドラッグ状態が変化した後(_ 状態: ドラッグ状態) {
