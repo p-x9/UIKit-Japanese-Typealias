@@ -10,6 +10,10 @@ import UIKit
 import FoundationJapaneseTypealias
 
 extension テーブルビュー {
+    private struct AssociatedKeys {
+        static var dataSource = 0
+    }
+    
     public typealias スタイル = テーブルビュー.Style
     public typealias スクロール位置 = テーブルビュー.ScrollPosition
     public typealias 行アニメーション = テーブルビュー.RowAnimation
@@ -20,10 +24,21 @@ extension テーブルビュー {
     
     public var データソース: テーブルビューデータソース? {
         get {
-            dataSource as? テーブルビューデータソース
+            if let object = objc_getAssociatedObject(self, &AssociatedKeys.dataSource)
+                as? テーブルビューデータソース {
+                return object
+            }
+            return nil
         }
         set {
-            dataSource = newValue
+            objc_setAssociatedObject(self,
+                                     &AssociatedKeys.dataSource,
+                                     newValue,
+                                     .OBJC_ASSOCIATION_RETAIN_NONATOMIC
+            )
+            if newValue != nil {
+                self.dataSource = self
+            }
         }
     }
     
