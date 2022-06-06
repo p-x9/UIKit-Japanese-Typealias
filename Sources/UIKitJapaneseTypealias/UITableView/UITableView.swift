@@ -12,6 +12,7 @@ import FoundationJapaneseTypealias
 extension テーブルビュー {
     private struct AssociatedKeys {
         static var dataSource = 0
+        static var delegate = 0
     }
     
     public typealias スタイル = テーブルビュー.Style
@@ -44,10 +45,21 @@ extension テーブルビュー {
     
     public var 委譲: テーブルビュー委譲? {
         get {
-            delegate as? テーブルビュー委譲
+            if let object = objc_getAssociatedObject(self, &AssociatedKeys.delegate)
+                as? テーブルビュー委譲 {
+                return object
+            }
+            return nil
         }
         set {
-            delegate = newValue
+            objc_setAssociatedObject(self,
+                                     &AssociatedKeys.delegate,
+                                     newValue,
+                                     .OBJC_ASSOCIATION_ASSIGN
+            )
+            if newValue != nil {
+                self.delegate = self
+            }
         }
     }
     
