@@ -10,7 +10,7 @@ import UIKit
 import FoundationJapaneseTypealias
 
 @objc
-public protocol テーブルビューデータソース where Self: NSObject {
+public protocol テーブルビューデータソース: AnyObject {
     @objc func テーブルビュー(_ テーブルビュー: テーブルビュー, セクション中の行数 セクション: 整数) -> 整数
     
     @objc func テーブルビュー(_ テーブルビュー: テーブルビュー, セル インデックスパス: IndexPath) -> テーブルビューセル
