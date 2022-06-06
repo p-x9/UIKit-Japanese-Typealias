@@ -34,7 +34,7 @@ extension テーブルビュー {
             objc_setAssociatedObject(self,
                                      &AssociatedKeys.dataSource,
                                      newValue,
-                                     .OBJC_ASSOCIATION_RETAIN_NONATOMIC
+                                     .OBJC_ASSOCIATION_ASSIGN
             )
             if newValue != nil {
                 self.dataSource = self
