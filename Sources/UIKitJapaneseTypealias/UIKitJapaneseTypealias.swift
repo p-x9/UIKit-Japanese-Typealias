@@ -40,6 +40,7 @@ public typealias テーブルビュー = UITableView
 public typealias テーブルビューセル = UITableViewCell
 public typealias テーブルビューヘッダフッタビュー = UITableViewHeaderFooterView
 public typealias コレクションビュー = UICollectionView
+public typealias コレクションビューセル = UICollectionViewCell
 public typealias スクロールビュー = UIScrollView
 
 public typealias バーボタンアイテム = UIBarButtonItem
