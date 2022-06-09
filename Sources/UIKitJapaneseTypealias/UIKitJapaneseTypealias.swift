@@ -41,6 +41,7 @@ public typealias テーブルビューセル = UITableViewCell
 public typealias テーブルビューヘッダフッタビュー = UITableViewHeaderFooterView
 public typealias コレクションビュー = UICollectionView
 public typealias コレクションビューセル = UICollectionViewCell
+public typealias コレクション再利用可能ビュー = UICollectionReusableView
 public typealias スクロールビュー = UIScrollView
 
 public typealias バーボタンアイテム = UIBarButtonItem
@@ -63,9 +64,14 @@ public typealias テーブルビュー行アクション = UITableViewRowAction
 public typealias テーブルビューフォーカス更新コンテキスト = UITableViewFocusUpdateContext
 
 /* UICollectionView */
-public typealias コレクションビュー委任 = UICollectionViewDelegate
-public typealias コレクションビューデータ源 = UICollectionViewDataSource
-public typealias コレクションビューデータ源事前取得 = UICollectionViewDataSourcePrefetching
+public typealias コレクションビューレイアウト = UICollectionViewLayout
+public typealias コレクションビュー委譲 = UICollectionViewDelegate
+public typealias コレクションビューデータソース = UICollectionViewDataSource
+public typealias コレクションビューデータソース事前取得 = UICollectionViewDataSourcePrefetching
+public typealias コレクションビュードラッグ委譲 = UICollectionViewDragDelegate
+public typealias コレクションビュードロップ委譲 = UICollectionViewDropDelegate
+public typealias コレクションビュー遷移レイアウト = UICollectionViewTransitionLayout
+public typealias コレクションビューレイアウト属性 = UICollectionViewLayoutAttributes
 
 /* Constraint */
 public typealias レイアウト制約 = NSLayoutConstraint
