@@ -11,6 +11,7 @@ import FoundationJapaneseTypealias
 
 extension コレクションビュー {
     private struct AssociatedKeys {
+        static var dataSource = 0
         static var delegate = 0
     }
     
@@ -49,10 +50,21 @@ extension コレクションビュー {
     
     public var データソース: コレクションビューデータソース? {
         get {
-            dataSource
+            if let object = objc_getAssociatedObject(self, &AssociatedKeys.dataSource)
+                as? コレクションビューデータソース {
+                return object
+            }
+            return nil
         }
         set {
-            dataSource = newValue
+            objc_setAssociatedObject(self,
+                                     &AssociatedKeys.dataSource,
+                                     newValue,
+                                     .OBJC_ASSOCIATION_ASSIGN
+            )
+            if newValue != nil {
+                self.dataSource = self
+            }
         }
     }
     
