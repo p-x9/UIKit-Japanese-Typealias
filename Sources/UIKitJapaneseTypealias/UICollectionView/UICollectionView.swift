@@ -10,6 +10,9 @@ import UIKit
 import FoundationJapaneseTypealias
 
 extension コレクションビュー {
+    private struct AssociatedKeys {
+        static var delegate = 0
+    }
     
     public typealias スクロール位置 = コレクションビュー.ScrollPosition
     public typealias 並べ替え速度 = コレクションビュー.ReorderingCadence
@@ -26,10 +29,21 @@ extension コレクションビュー {
     
     public var 委譲: コレクションビュー委譲? {
         get {
-            delegate
+            if let object = objc_getAssociatedObject(self, &AssociatedKeys.delegate)
+                as? コレクションビュー委譲 {
+                return object
+            }
+            return nil
         }
         set {
-            delegate = newValue
+            objc_setAssociatedObject(self,
+                                     &AssociatedKeys.delegate,
+                                     newValue,
+                                     .OBJC_ASSOCIATION_ASSIGN
+            )
+            if newValue != nil {
+                self.delegate = self
+            }
         }
     }
     

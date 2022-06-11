@@ -65,13 +65,14 @@ public typealias テーブルビューフォーカス更新コンテキスト = 
 
 /* UICollectionView */
 public typealias コレクションビューレイアウト = UICollectionViewLayout
-public typealias コレクションビュー委譲 = UICollectionViewDelegate
+//public typealias コレクションビュー委譲 = UICollectionViewDelegate
 public typealias コレクションビューデータソース = UICollectionViewDataSource
 public typealias コレクションビューデータソース事前取得 = UICollectionViewDataSourcePrefetching
 public typealias コレクションビュードラッグ委譲 = UICollectionViewDragDelegate
 public typealias コレクションビュードロップ委譲 = UICollectionViewDropDelegate
 public typealias コレクションビュー遷移レイアウト = UICollectionViewTransitionLayout
 public typealias コレクションビューレイアウト属性 = UICollectionViewLayoutAttributes
+public typealias コレクションビューフォーカス更新コンテキスト = UICollectionViewFocusUpdateContext
 
 /* Constraint */
 public typealias レイアウト制約 = NSLayoutConstraint
