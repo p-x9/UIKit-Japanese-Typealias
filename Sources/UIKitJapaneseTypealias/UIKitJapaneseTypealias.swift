@@ -65,6 +65,7 @@ public typealias テーブルビューフォーカス更新コンテキスト = 
 
 /* UICollectionView */
 public typealias コレクションビューレイアウト = UICollectionViewLayout
+public typealias コレクションビューフローレイアウト = UICollectionViewFlowLayout
 //public typealias コレクションビュー委譲 = UICollectionViewDelegate
 //public typealias コレクションビューデータソース = UICollectionViewDataSource
 public typealias コレクションビューデータソース事前取得 = UICollectionViewDataSourcePrefetching
