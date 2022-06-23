@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FoundationJapaneseTypealias
 
 public extension ビュー {
     var タグ: 整数 {

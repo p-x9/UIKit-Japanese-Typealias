@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FoundationJapaneseTypealias
 
 extension ビューコントローラ {
     public var ビュー: ビュー {

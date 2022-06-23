@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FoundationJapaneseTypealias
 
 extension コレクションビュー {
     private struct AssociatedKeys {

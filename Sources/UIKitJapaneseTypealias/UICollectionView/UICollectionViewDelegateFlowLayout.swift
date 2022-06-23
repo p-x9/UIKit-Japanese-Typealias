@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FoundationJapaneseTypealias
 
 public protocol コレクションビューフローレイアウト委譲: コレクションビュー委譲 {
     func コレクションビュー(_ コレクションビュー: コレクションビュー, レイアウト: コレクションビューレイアウト, アイテムのサイズ インデックスパス: IndexPath) -> 大きさ

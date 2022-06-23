@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FoundationJapaneseTypealias
 
 public protocol コレクションビュー委譲: NSObjectProtocol {
     func コレクションビュー(_ コレクションビュー: コレクションビュー, アイテムをハイライトするべきか インデックスパス: IndexPath) -> 真理値
