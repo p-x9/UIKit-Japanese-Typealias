@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FoundationJapaneseTypealias
 
 public protocol コレクションビューデータソース: AnyObject {
     func コレクションビュー(_ コレクションビュー: コレクションビュー, セクション中のアイテム数 セクション: 整数) -> 整数

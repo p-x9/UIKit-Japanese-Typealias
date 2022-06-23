@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FoundationJapaneseTypealias
 
 @objc
 public protocol テーブルビュー委譲: NSObjectProtocol {
