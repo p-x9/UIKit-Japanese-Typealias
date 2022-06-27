@@ -66,6 +66,11 @@ public typealias テーブルビューフォーカス更新コンテキスト = 
 /* UICollectionView */
 public typealias コレクションビューレイアウト = UICollectionViewLayout
 public typealias コレクションビューフローレイアウト = UICollectionViewFlowLayout
+public typealias コレクションビュー構成レイアウト = UICollectionViewCompositionalLayout
+public typealias コレクションビュー構成レイアウト設定 = UICollectionViewCompositionalLayoutConfiguration
+public typealias コレクションビュー構成レイアウトセクションプロバイダ = UICollectionViewCompositionalLayoutSectionProvider
+@available(iOS 14.0, tvOS 14.0, *)
+public typealias コレクションビューレイアウトリスト設定 = UICollectionLayoutListConfiguration
 //public typealias コレクションビュー委譲 = UICollectionViewDelegate
 //public typealias コレクションビューデータソース = UICollectionViewDataSource
 public typealias コレクションビューデータソース事前取得 = UICollectionViewDataSourcePrefetching
@@ -74,6 +79,7 @@ public typealias コレクションビュードロップ委譲 = UICollectionVie
 public typealias コレクションビュー遷移レイアウト = UICollectionViewTransitionLayout
 public typealias コレクションビューレイアウト属性 = UICollectionViewLayoutAttributes
 public typealias コレクションビューフォーカス更新コンテキスト = UICollectionViewFocusUpdateContext
+public typealias コレクションレイアウトセクション = NSCollectionLayoutSection
 
 /* Constraint */
 public typealias レイアウト制約 = NSLayoutConstraint
