@@ -80,6 +80,13 @@ public typealias コレクションビュー遷移レイアウト = UICollection
 public typealias コレクションビューレイアウト属性 = UICollectionViewLayoutAttributes
 public typealias コレクションビューフォーカス更新コンテキスト = UICollectionViewFocusUpdateContext
 public typealias コレクションレイアウトセクション = NSCollectionLayoutSection
+public typealias コレクションレイアウトグループ = NSCollectionLayoutGroup
+public typealias コレクションレイアウトセクション直行スクロール挙動 = UICollectionLayoutSectionOrthogonalScrollingBehavior
+public typealias コレクションレイアウト境界補足アイテム = NSCollectionLayoutBoundarySupplementaryItem
+public typealias コレクションレイアウト可視アイテム = NSCollectionLayoutVisibleItem
+public typealias コレクションレイアウト装飾アイテム = NSCollectionLayoutDecorationItem
+public typealias コレクションレイアウト環境 = NSCollectionLayoutEnvironment
+public typealias コレクションレイアウトセクション可視アイテム無効化ハンドラ = ([コレクションレイアウト可視アイテム], 位置, コレクションレイアウト環境) -> Void
 
 /* Constraint */
 public typealias レイアウト制約 = NSLayoutConstraint
@@ -101,6 +108,9 @@ public typealias ビューコントローラが対応する画面の向き = UII
 public typealias UIの特性集 = UITraitCollection
 
 public typealias エッジインセット = UIEdgeInsets
+public typealias 方向エッジインセット = NSDirectionalEdgeInsets
+@available(iOS 14.0, *)
+public typealias コンテンツインセット関係 = UIContentInsetsReference
 
 public typealias 視覚エフェクト = UIVisualEffect
 
