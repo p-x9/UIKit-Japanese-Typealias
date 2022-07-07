@@ -26,7 +26,7 @@ public typealias 位置と大きさ = CGRect
 
 public typealias 反応機 = UIResponder
 
-public typealias 制御 = UIControl
+public typealias コントロール = UIControl
 
 public typealias ラベル = UILabel
 public typealias テキストビュー = UITextView
@@ -52,6 +52,7 @@ public typealias フォント = UIFont
 
 public typealias イベント = UIEvent
 public typealias アクション = UIAction
+public typealias メニュー = UIMenu
 
 /* UITableView */
 //public typealias テーブルビュー委譲 = UITableViewDelegate
@@ -122,3 +123,10 @@ public typealias ターゲットプレビュー = UITargetedPreview
 public typealias スワイプアクション設定 = UISwipeActionsConfiguration
 
 public typealias フォーカスアニメーションコーディネータ = UIFocusAnimationCoordinator
+
+@available(iOS 13.4, *)
+public typealias ポインタエフェクト = UIPointerEffect
+@available(iOS 13.4, *)
+public typealias ポインタ形 = UIPointerShape
+@available(iOS 13.4, *)
+public typealias ポインタスタイル = UIPointerStyle
