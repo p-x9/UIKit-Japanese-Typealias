@@ -145,6 +145,15 @@ extension ボタン {
 
 extension ボタン {
     
+    @available(iOS 14.0, *)
+    public convenience init(位置と大きさ: 位置と大きさ, 主要アクション: アクション?) {
+        self.init(frame: 位置と大きさ, primaryAction: 主要アクション)
+    }
+    
+    public convenience init(タイプ ボタンタイプ: ボタンタイプ) {
+        self.init(type: ボタンタイプ)
+    }
+    
     @available(iOS 15.0, *)
     public func 設定の更新が必要です() {
         setNeedsUpdateConfiguration()
