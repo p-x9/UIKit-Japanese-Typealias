@@ -440,6 +440,10 @@ extension テーブルビュー {
 }
  
 extension テーブルビュー {
+    public convenience init(位置と大きさ: 位置と大きさ, スタイル: スタイル) {
+        self.init(frame: 位置と大きさ, style: スタイル)
+    }
+    
     public func 行数(セクション: 整数) -> 整数 {
         numberOfRows(inSection: セクション)
     }
@@ -589,4 +593,10 @@ extension テーブルビュー {
     public func 登録(_ クラス: AnyClass?, ヘッダフッタ識別子: 文字列) {
         register(クラス, forHeaderFooterViewReuseIdentifier: ヘッダフッタ識別子)
     }
+}
+
+extension テーブルビュー.スタイル {
+    static let プレーン: Self = .plain
+    static let グループ化された: Self = .grouped
+    static let 角丸のグループ化された: Self = .insetGrouped
 }
