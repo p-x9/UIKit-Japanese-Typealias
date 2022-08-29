@@ -11,7 +11,7 @@ import UIKitJapaneseTypealias
 
 class ホームビューコントローラ: ビューコントローラ {
     
-    private let メインテーブルビュー = UIKitJapaneseTypealias.テーブルビュー(frame: .null, style: .grouped)
+    private let メインテーブルビュー = UIKitJapaneseTypealias.テーブルビュー(位置と大きさ: .null, スタイル: .グループ化された)
     
     override func ビューが読み込まれた後() {
         super.ビューが読み込まれた後()
