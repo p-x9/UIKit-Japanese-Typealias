@@ -161,14 +161,14 @@ extension UITableView: UITableViewDelegate {
     
     public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         guard 委譲?.テーブルビュー?(tableView, ヘッダビュー: section) != nil else {
-            return 0
+            return tableView.sectionHeaderHeight
         }
         return 委譲?.テーブルビュー?(tableView, ヘッダの高さ: section) ?? tableView.sectionHeaderHeight
     }
     
     public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         guard 委譲?.テーブルビュー?(tableView, フッタビュー: section) != nil else {
-            return 0
+            return tableView.sectionFooterHeight
         }
         return 委譲?.テーブルビュー?(tableView, フッタの高さ: section) ?? tableView.sectionFooterHeight
     }
