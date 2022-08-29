@@ -146,12 +146,22 @@ extension ボタン {
 extension ボタン {
     
     @available(iOS 14.0, *)
+    @objc
     public convenience init(位置と大きさ: 位置と大きさ, 主要アクション: アクション?) {
-        self.init(frame: 位置と大きさ, primaryAction: 主要アクション)
+        if Self.ビューを日本語で全部書きたい {
+            self.init(位置と大きさ: 位置と大きさ, 主要アクション: 主要アクション)
+        } else {
+            self.init(frame: 位置と大きさ, primaryAction: 主要アクション)
+        }
     }
     
+    @objc
     public convenience init(タイプ ボタンタイプ: ボタンタイプ) {
-        self.init(type: ボタンタイプ)
+        if Self.ビューを日本語で全部書きたい {
+            self.init(タイプ: ボタンタイプ)
+        } else {
+            self.init(type: ボタンタイプ)
+        }
     }
     
     @available(iOS 15.0, *)
@@ -164,24 +174,49 @@ extension ボタン {
         updateConfiguration()
     }
     
-    public func タイトルをセット(_ タイトル: 文字列?, 次の状態の時 状態: コントロール.State) {
-        setTitle(タイトル, for: 状態)
+    @objc
+    open func タイトルをセット(_ タイトル: 文字列?, 次の状態の時 状態: コントロール.State) {
+        if Self.ビューを日本語で全部書きたい {
+            タイトルをセット(タイトル, 次の状態の時: 状態)
+        } else {
+            setTitle(タイトル, for: 状態)
+        }
     }
     
-    public func タイトルの色をセット(_ 色: 色?, 次の状態の時 状態: コントロール.State) {
-        setTitleColor(色, for: 状態)
+    @objc
+    open func タイトルの色をセット(_ 色: 色?, 次の状態の時 状態: コントロール.State) {
+        if Self.ビューを日本語で全部書きたい {
+            タイトルの色をセット(色, 次の状態の時: 状態)
+        } else {
+            setTitleColor(色, for: 状態)
+        }
     }
     
-    public func タイトルの影の色をセット(_ 色: 色?, 次の状態の時 状態: コントロール.State) {
-        setTitleShadowColor(色, for: 状態)
+    @objc
+    open func タイトルの影の色をセット(_ 色: 色?, 次の状態の時 状態: コントロール.State) {
+        if Self.ビューを日本語で全部書きたい {
+            タイトルの影の色をセット(色, 次の状態の時: 状態)
+        } else {
+            setTitleShadowColor(色, for: 状態)
+        }
     }
     
-    public func 画像をセット(_ 画像: 画像?, 次の状態の時 状態: コントロール.State) {
-        setImage(画像, for: 状態)
+    @objc
+    open func 画像をセット(_ 画像: 画像?, 次の状態の時 状態: コントロール.State) {
+        if Self.ビューを日本語で全部書きたい {
+            画像をセット(画像, 次の状態の時: 状態)
+        } else {
+            setImage(画像, for: 状態)
+        }
     }
     
-    public func 背景画像をセット(_ 画像: 画像?, 次の状態の時 状態: コントロール.State) {
-        setBackgroundImage(画像, for: 状態)
+    @objc
+    open func 背景画像をセット(_ 画像: 画像?, 次の状態の時 状態: コントロール.State) {
+        if Self.ビューを日本語で全部書きたい {
+            背景画像をセット(画像, 次の状態の時: 状態)
+        } else {
+            setBackgroundImage(画像, for: 状態)
+        }
     }
     
     @available(iOS 13.0, *)
@@ -332,22 +367,42 @@ extension ボタン {
     }
     
     @available(iOS, introduced: 2.0, deprecated: 15.0, message: "「子供をレイアウト」をオーバライドして配置する")
-    public func 背景の位置と大きさ(次の絶対位置と大きさの場合 絶対位置と大きさ: 位置と大きさ) -> 位置と大きさ {
-        backgroundRect(forBounds: 絶対位置と大きさ)
+    @objc
+    open func 背景の位置と大きさ(次の絶対位置と大きさの場合 絶対位置と大きさ: 位置と大きさ) -> 位置と大きさ {
+        if Self.ビューを日本語で全部書きたい {
+            return 背景の位置と大きさ(次の絶対位置と大きさの場合: 絶対位置と大きさ)
+        } else {
+            return backgroundRect(forBounds: 絶対位置と大きさ)
+        }
     }
     
     @available(iOS, introduced: 2.0, deprecated: 15.0, message: "「子供をレイアウト」をオーバライドして配置する")
-    public func コンテンツの位置と大きさ(次の絶対位置と大きさの場合 絶対位置と大きさ: 位置と大きさ) -> 位置と大きさ {
-        contentRect(forBounds: 絶対位置と大きさ)
+    @objc
+    open func コンテンツの位置と大きさ(次の絶対位置と大きさの場合 絶対位置と大きさ: 位置と大きさ) -> 位置と大きさ {
+        if Self.ビューを日本語で全部書きたい {
+            return コンテンツの位置と大きさ(次の絶対位置と大きさの場合: 絶対位置と大きさ)
+        } else {
+            return contentRect(forBounds: 絶対位置と大きさ)
+        }
     }
     
     @available(iOS, introduced: 2.0, deprecated: 15.0, message: "「子供をレイアウト」をオーバライドして配置する")
-    public func タイトルの位置と大きさ(次の絶対位置と大きさの場合 絶対位置と大きさ: 位置と大きさ) -> 位置と大きさ {
-        titleRect(forContentRect: 絶対位置と大きさ)
+    @objc
+    open func タイトルの位置と大きさ(次の絶対位置と大きさの場合 絶対位置と大きさ: 位置と大きさ) -> 位置と大きさ {
+        if Self.ビューを日本語で全部書きたい {
+            return タイトルの位置と大きさ(次の絶対位置と大きさの場合: 絶対位置と大きさ)
+        } else {
+            return titleRect(forContentRect: 絶対位置と大きさ)
+        }
     }
     
     @available(iOS, introduced: 2.0, deprecated: 15.0, message: "「子供をレイアウト」をオーバライドして配置する")
-    public func 画像の位置と大きさ(次の絶対位置と大きさの場合 絶対位置と大きさ: 位置と大きさ) -> 位置と大きさ {
-        imageRect(forContentRect: 絶対位置と大きさ)
+    @objc
+    open func 画像の位置と大きさ(次の絶対位置と大きさの場合 絶対位置と大きさ: 位置と大きさ) -> 位置と大きさ {
+        if Self.ビューを日本語で全部書きたい {
+            return 画像の位置と大きさ(次の絶対位置と大きさの場合: 絶対位置と大きさ)
+        } else {
+            return imageRect(forContentRect: 絶対位置と大きさ)
+        }
     }
 }
