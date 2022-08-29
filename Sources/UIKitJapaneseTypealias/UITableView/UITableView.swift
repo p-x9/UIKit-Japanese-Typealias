@@ -595,7 +595,7 @@ extension テーブルビュー {
     }
 }
 
-extension テーブルビュー.スタイル {
+public extension テーブルビュー.スタイル {
     static let プレーン: Self = .plain
     static let グループ化された: Self = .grouped
     static let 角丸のグループ化された: Self = .insetGrouped
