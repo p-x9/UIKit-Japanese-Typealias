@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		4242107E28BD0FDA00AD8982 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4242107D28BD0FDA00AD8982 /* AppDelegate.swift */; };
 		4242108028BD0FDA00AD8982 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4242107F28BD0FDA00AD8982 /* SceneDelegate.swift */; };
-		4242108228BD0FDA00AD8982 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4242108128BD0FDA00AD8982 /* ViewController.swift */; };
+		4242108228BD0FDA00AD8982 /* ホームビューコントローラ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4242108128BD0FDA00AD8982 /* ホームビューコントローラ.swift */; };
 		4242108528BD0FDA00AD8982 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4242108328BD0FDA00AD8982 /* Main.storyboard */; };
 		4242108728BD0FDD00AD8982 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4242108628BD0FDD00AD8982 /* Assets.xcassets */; };
 		4242108A28BD0FDD00AD8982 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4242108828BD0FDD00AD8982 /* LaunchScreen.storyboard */; };
 		4242109528BD0FDD00AD8982 /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4242109428BD0FDD00AD8982 /* ExampleTests.swift */; };
 		4242109F28BD0FDD00AD8982 /* ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4242109E28BD0FDD00AD8982 /* ExampleUITests.swift */; };
 		424210A128BD0FDD00AD8982 /* ExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424210A028BD0FDD00AD8982 /* ExampleUITestsLaunchTests.swift */; };
+		424210B328BD129800AD8982 /* UIKitJapaneseTypealias in Frameworks */ = {isa = PBXBuildFile; productRef = 424210B228BD129800AD8982 /* UIKitJapaneseTypealias */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,7 @@
 		4242107A28BD0FDA00AD8982 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4242107D28BD0FDA00AD8982 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4242107F28BD0FDA00AD8982 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4242108128BD0FDA00AD8982 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4242108128BD0FDA00AD8982 /* ホームビューコントローラ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ホームビューコントローラ.swift"; sourceTree = "<group>"; };
 		4242108428BD0FDA00AD8982 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4242108628BD0FDD00AD8982 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4242108928BD0FDD00AD8982 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,7 +50,7 @@
 		4242109A28BD0FDD00AD8982 /* ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4242109E28BD0FDD00AD8982 /* ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleUITests.swift; sourceTree = "<group>"; };
 		424210A028BD0FDD00AD8982 /* ExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		424210AE28BD101500AD8982 /* UIKit-Japanese-Typealias */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "UIKit-Japanese-Typealias"; path = ..; sourceTree = "<group>"; };
+		424210B028BD117A00AD8982 /* UIKit-Japanese-Typealias */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "UIKit-Japanese-Typealias"; path = ..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				424210B328BD129800AD8982 /* UIKitJapaneseTypealias in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,11 +82,12 @@
 		4242107128BD0FDA00AD8982 = {
 			isa = PBXGroup;
 			children = (
-				424210AD28BD101500AD8982 /* Packages */,
+				424210AF28BD117A00AD8982 /* Packages */,
 				4242107C28BD0FDA00AD8982 /* Example */,
 				4242109328BD0FDD00AD8982 /* ExampleTests */,
 				4242109D28BD0FDD00AD8982 /* ExampleUITests */,
 				4242107B28BD0FDA00AD8982 /* Products */,
+				424210B128BD129800AD8982 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,7 +106,7 @@
 			children = (
 				4242107D28BD0FDA00AD8982 /* AppDelegate.swift */,
 				4242107F28BD0FDA00AD8982 /* SceneDelegate.swift */,
-				4242108128BD0FDA00AD8982 /* ViewController.swift */,
+				4242108128BD0FDA00AD8982 /* ホームビューコントローラ.swift */,
 				4242108328BD0FDA00AD8982 /* Main.storyboard */,
 				4242108628BD0FDD00AD8982 /* Assets.xcassets */,
 				4242108828BD0FDD00AD8982 /* LaunchScreen.storyboard */,
@@ -129,12 +132,19 @@
 			path = ExampleUITests;
 			sourceTree = "<group>";
 		};
-		424210AD28BD101500AD8982 /* Packages */ = {
+		424210AF28BD117A00AD8982 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				424210AE28BD101500AD8982 /* UIKit-Japanese-Typealias */,
+				424210B028BD117A00AD8982 /* UIKit-Japanese-Typealias */,
 			);
 			name = Packages;
+			sourceTree = "<group>";
+		};
+		424210B128BD129800AD8982 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +163,9 @@
 			dependencies = (
 			);
 			name = Example;
+			packageProductDependencies = (
+				424210B228BD129800AD8982 /* UIKitJapaneseTypealias */,
+			);
 			productName = Example;
 			productReference = 4242107A28BD0FDA00AD8982 /* Example.app */;
 			productType = "com.apple.product-type.application";
@@ -268,7 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4242108228BD0FDA00AD8982 /* ViewController.swift in Sources */,
+				4242108228BD0FDA00AD8982 /* ホームビューコントローラ.swift in Sources */,
 				4242107E28BD0FDA00AD8982 /* AppDelegate.swift in Sources */,
 				4242108028BD0FDA00AD8982 /* SceneDelegate.swift in Sources */,
 			);
@@ -612,6 +625,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		424210B228BD129800AD8982 /* UIKitJapaneseTypealias */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIKitJapaneseTypealias;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4242107228BD0FDA00AD8982 /* Project object */;
 }
