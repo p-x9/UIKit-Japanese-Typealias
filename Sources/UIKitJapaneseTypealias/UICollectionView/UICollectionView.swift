@@ -159,7 +159,7 @@ extension コレクションビュー {
         }
     }
     
-    public var 選択されたセルのインデックスパス: [IndexPath]? {
+    public var 選択されたセルのインデックスパス: [インデックスパス]? {
         indexPathsForSelectedItems
     }
     
@@ -176,7 +176,7 @@ extension コレクションビュー {
         visibleCells
     }
     
-    public var 可視セルのインデックスパス: [IndexPath]? {
+    public var 可視セルのインデックスパス: [インデックスパス]? {
         indexPathsForVisibleItems
     }
     
@@ -277,19 +277,19 @@ extension コレクションビュー {
         register(nib, forSupplementaryViewOfKind: 補足ビューの種類, withReuseIdentifier: 再利用識別子)
     }
     
-    public func 再利用可能なセルをデキュー(識別子: 文字列, インデックスパス: IndexPath) -> コレクションビューセル? {
+    public func 再利用可能なセルをデキュー(識別子: 文字列, インデックスパス: インデックスパス) -> コレクションビューセル? {
         dequeueReusableCell(withReuseIdentifier: 識別子, for: インデックスパス)
     }
     
-    public func 再利用可能な補足ビューをデキュー(種類: 文字列, 識別子: 文字列, インデックスパス: IndexPath) -> コレクション再利用可能ビュー? {
+    public func 再利用可能な補足ビューをデキュー(種類: 文字列, 識別子: 文字列, インデックスパス: インデックスパス) -> コレクション再利用可能ビュー? {
         dequeueReusableSupplementaryView(ofKind: 種類, withReuseIdentifier: 識別子, for: インデックスパス)
     }
     
-    public func アイテムを選択(インデックスパス: IndexPath?, アニメーションと共に: 真理値, 位置: スクロール位置) {
+    public func アイテムを選択(インデックスパス: インデックスパス?, アニメーションと共に: 真理値, 位置: スクロール位置) {
         selectItem(at: インデックスパス, animated: アニメーションと共に, scrollPosition: 位置)
     }
     
-    public func アイテムの選択を解除(インデックスパス: IndexPath, アニメーションと共に: 真理値, 位置: スクロール位置) {
+    public func アイテムの選択を解除(インデックスパス: インデックスパス, アニメーションと共に: 真理値, 位置: スクロール位置) {
         selectItem(at: インデックスパス, animated: アニメーションと共に, scrollPosition: 位置)
     }
     
@@ -317,27 +317,27 @@ extension コレクションビュー {
         numberOfItems(inSection: セクション)
     }
     
-    public func アイテムのレイアウト属性(インデックスパス: IndexPath) -> コレクションビューレイアウト属性? {
+    public func アイテムのレイアウト属性(インデックスパス: インデックスパス) -> コレクションビューレイアウト属性? {
         layoutAttributesForItem(at: インデックスパス)
     }
     
-    public func 補足ビューのレイアウト属性(種類: 文字列, インデックスパス: IndexPath) -> コレクションビューレイアウト属性? {
+    public func 補足ビューのレイアウト属性(種類: 文字列, インデックスパス: インデックスパス) -> コレクションビューレイアウト属性? {
         layoutAttributesForSupplementaryElement(ofKind: 種類, at: インデックスパス)
     }
     
-    public func インデックスパス(位置: 位置) -> IndexPath? {
+    public func インデックスパス(位置: 位置) -> インデックスパス? {
         indexPathForItem(at: 位置)
     }
     
-    public func インデックスパス(セル: コレクションビューセル) -> IndexPath? {
+    public func インデックスパス(セル: コレクションビューセル) -> インデックスパス? {
         indexPath(for: セル)
     }
     
-    public func セル(インデックスパス: IndexPath) -> コレクションビューセル? {
+    public func セル(インデックスパス: インデックスパス) -> コレクションビューセル? {
         cellForItem(at: インデックスパス)
     }
     
-    public func 補足ビュー(種類: 文字列, インデックスパス: IndexPath) -> コレクション再利用可能ビュー? {
+    public func 補足ビュー(種類: 文字列, インデックスパス: インデックスパス) -> コレクション再利用可能ビュー? {
         supplementaryView(forElementKind: 種類, at: インデックスパス)
     }
     
@@ -345,19 +345,19 @@ extension コレクションビュー {
         visibleSupplementaryViews(ofKind: 種類)
     }
     
-    public func 可視補足ビューのインデックスパス(種類: 文字列) -> [IndexPath] {
+    public func 可視補足ビューのインデックスパス(種類: 文字列) -> [インデックスパス] {
         indexPathsForVisibleSupplementaryElements(ofKind: 種類)
     }
     
-    public func アイテムまでスクロール(インデックスパス: IndexPath, 位置: スクロール位置, アニメーションと共に: 真理値) {
+    public func アイテムまでスクロール(インデックスパス: インデックスパス, 位置: スクロール位置, アニメーションと共に: 真理値) {
         scrollToItem(at: インデックスパス, at: 位置, animated: アニメーションと共に)
     }
     
-    public func セクションを挿入(_ セクション: IndexSet) {
+    public func セクションを挿入(_ セクション: インデックスセット) {
         insertSections(セクション)
     }
     
-    public func セクションを削除(_ セクション: IndexSet) {
+    public func セクションを削除(_ セクション: インデックスセット) {
         deleteSections(セクション)
     }
     
@@ -365,28 +365,28 @@ extension コレクションビュー {
         moveSection(セクション, toSection: 新しいセクション)
     }
     
-    public func セクションを再読み込み(_ セクション: IndexSet) {
+    public func セクションを再読み込み(_ セクション: インデックスセット) {
         reloadSections(セクション)
     }
     
-    public func アイテムを挿入(インデックスパス: [IndexPath]) {
+    public func アイテムを挿入(インデックスパス: [インデックスパス]) {
         insertItems(at: インデックスパス)
     }
     
-    public func アイテムを削除(インデックスパス: [IndexPath]) {
+    public func アイテムを削除(インデックスパス: [インデックスパス]) {
         deleteItems(at: インデックスパス)
     }
     
-    public func アイテムを移動(インデックスパス: IndexPath, 新インデックスパス: IndexPath) {
+    public func アイテムを移動(インデックスパス: インデックスパス, 新インデックスパス: インデックスパス) {
         moveItem(at: インデックスパス, to: 新インデックスパス)
     }
     
-    public func アイテムを再読み込み(インデックスパス: [IndexPath]) {
+    public func アイテムを再読み込み(インデックスパス: [インデックスパス]) {
         reloadItems(at: インデックスパス)
     }
     
     @available(iOS 15.0, *)
-    public func アイテムを再設定(インデックスパス: [IndexPath]) {
+    public func アイテムを再設定(インデックスパス: [インデックスパス]) {
         reconfigureItems(at: インデックスパス)
     }
     
@@ -394,7 +394,7 @@ extension コレクションビュー {
         performBatchUpdates(更新, completion: 完了)
     }
     
-    public func インタラクティブなアイテムの移動を始める(インデックスパス: IndexPath) {
+    public func インタラクティブなアイテムの移動を始める(インデックスパス: インデックスパス) {
         beginInteractiveMovementForItem(at: インデックスパス)
     }
     
@@ -418,11 +418,11 @@ extension コレクションビュー {
     public typealias 補足ビュー登録 = SupplementaryRegistration
     
     
-    public func 再利用可能な設定済みセルをデキュー<セルクラス, アイテム>(登録: セル登録<セルクラス, アイテム>, インデックスパス: IndexPath, アイテム: アイテム?) -> コレクションビューセル where セルクラス: コレクションビューセル {
+    public func 再利用可能な設定済みセルをデキュー<セルクラス, アイテム>(登録: セル登録<セルクラス, アイテム>, インデックスパス: インデックスパス, アイテム: アイテム?) -> コレクションビューセル where セルクラス: コレクションビューセル {
         dequeueConfiguredReusableCell(using: 登録, for: インデックスパス, item: アイテム)
     }
     
-    public func 再利用可能な補足ビューをデキュー<補足ビュークラス>(登録: 補足ビュー登録<補足ビュークラス>, インデックスパス: IndexPath) -> 補足ビュークラス where 補足ビュークラス: コレクション再利用可能ビュー {
+    public func 再利用可能な補足ビューをデキュー<補足ビュークラス>(登録: 補足ビュー登録<補足ビュークラス>, インデックスパス: インデックスパス) -> 補足ビュークラス where 補足ビュークラス: コレクション再利用可能ビュー {
         dequeueConfiguredReusableSupplementary(using: 登録, for: インデックスパス)
     }
 }
@@ -431,11 +431,11 @@ extension コレクションビュー {
 public extension コレクションビュー.セル登録 {
     typealias セルクラス = Cell
     typealias アイテム = Item
-    typealias ハンドラ = (_ セル: セルクラス, _ インデックスパス: IndexPath, _ アイテム識別子: アイテム) -> Void
+    typealias ハンドラ = (_ セル: セルクラス, _ インデックスパス: インデックスパス, _ アイテム識別子: アイテム) -> Void
 }
 
 @available(iOS 14.0, tvOS 14.0, *)
 public extension コレクションビュー.補足ビュー登録 {
     typealias 補足ビュークラス = Supplementary
-    typealias ハンドラ = (_ 補足ビュー: 補足ビュークラス, _ 種類: 文字列, _ インデックスパス: IndexPath) -> Void
+    typealias ハンドラ = (_ 補足ビュー: 補足ビュークラス, _ 種類: 文字列, _ インデックスパス: インデックスパス) -> Void
 }

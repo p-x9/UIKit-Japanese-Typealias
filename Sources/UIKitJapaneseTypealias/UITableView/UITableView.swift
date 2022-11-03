@@ -271,11 +271,11 @@ extension テーブルビュー {
         }
     }
     
-    public var 選択された行のインデックスパス: IndexPath? {
+    public var 選択された行のインデックスパス: インデックスパス? {
         indexPathForSelectedRow
     }
     
-    public var 選択された行のインデックスパスリスト: [IndexPath]? {
+    public var 選択された行のインデックスパスリスト: [インデックスパス]? {
         indexPathsForSelectedRows
     }
     
@@ -460,23 +460,23 @@ extension テーブルビュー {
         rectForFooter(inSection: セクション)
     }
     
-    public func 行の位置と大きさ(インデックスパス: IndexPath) -> 位置と大きさ {
+    public func 行の位置と大きさ(インデックスパス: インデックスパス) -> 位置と大きさ {
         rectForRow(at: インデックスパス)
     }
     
-    public func インデックスパス(位置: 位置) -> IndexPath? {
+    public func インデックスパス(位置: 位置) -> インデックスパス? {
         indexPathForRow(at: 位置)
     }
     
-    public func インデックスパス(セル: テーブルビューセル) -> IndexPath? {
+    public func インデックスパス(セル: テーブルビューセル) -> インデックスパス? {
         indexPath(for: セル)
     }
     
-    public func インデックスパス(次の範囲内の 範囲: 位置と大きさ) -> [IndexPath]? {
+    public func インデックスパス(次の範囲内の 範囲: 位置と大きさ) -> [インデックスパス]? {
         indexPathsForRows(in: 範囲)
     }
     
-    public func セル(インデックスパス: IndexPath) -> テーブルビューセル? {
+    public func セル(インデックスパス: インデックスパス) -> テーブルビューセル? {
         cellForRow(at: インデックスパス)
     }
     
@@ -488,7 +488,7 @@ extension テーブルビュー {
         footerView(forSection: セクション)
     }
     
-    public func 行までスクロール(インデックスパス: IndexPath, 位置: スクロール位置, アニメーションと共に: 真理値) {
+    public func 行までスクロール(インデックスパス: インデックスパス, 位置: スクロール位置, アニメーションと共に: 真理値) {
         scrollToRow(at: インデックスパス, at: 位置, animated: アニメーションと共に)
     }
     
@@ -525,24 +525,24 @@ extension テーブルビュー {
         reloadSections(セクション, with: アニメーション)
     }
     
-    public func 行を挿入(インデックスパス: [IndexPath], アニメーション: 行アニメーション) {
+    public func 行を挿入(インデックスパス: [インデックスパス], アニメーション: 行アニメーション) {
         insertRows(at: インデックスパス, with: アニメーション)
     }
     
-    public func 行を削除(インデックスパス: [IndexPath], アニメーション: 行アニメーション) {
+    public func 行を削除(インデックスパス: [インデックスパス], アニメーション: 行アニメーション) {
         deleteRows(at: インデックスパス, with: アニメーション)
     }
     
-    public func 行を移動(インデックスパス: IndexPath, 新インデックスパス: IndexPath) {
+    public func 行を移動(インデックスパス: インデックスパス, 新インデックスパス: インデックスパス) {
         moveRow(at: インデックスパス, to: 新インデックスパス)
     }
     
-    public func 行を再読み込み(インデックスパス: [IndexPath], アニメーション: 行アニメーション) {
+    public func 行を再読み込み(インデックスパス: [インデックスパス], アニメーション: 行アニメーション) {
         reloadRows(at: インデックスパス, with: アニメーション)
     }
     
     @available(iOS 15.0, *)
-    public func 行を再設定(インデックスパス: [IndexPath]) {
+    public func 行を再設定(インデックスパス: [インデックスパス]) {
         reconfigureRows(at: インデックスパス)
     }
     
@@ -558,11 +558,11 @@ extension テーブルビュー {
         self.setEditing(編集中, animated: アニメーションと共に)
     }
     
-    public func 行を選択(インデックスパス: IndexPath?, アニメーションと共に: 真理値, 位置: スクロール位置) {
+    public func 行を選択(インデックスパス: インデックスパス?, アニメーションと共に: 真理値, 位置: スクロール位置) {
         selectRow(at: インデックスパス, animated: アニメーションと共に, scrollPosition: 位置)
     }
     
-    public func 行の選択を解除(インデックスパス: IndexPath, アニメーションと共に: 真理値) {
+    public func 行の選択を解除(インデックスパス: インデックスパス, アニメーションと共に: 真理値) {
         deselectRow(at: インデックスパス, animated: アニメーションと共に)
     }
     
@@ -570,7 +570,7 @@ extension テーブルビュー {
         dequeueReusableCell(withIdentifier: 識別子)
     }
     
-    public func 再利用可能なセルをデキュー(識別子: 文字列, インデックスパス: IndexPath) -> テーブルビューセル? {
+    public func 再利用可能なセルをデキュー(識別子: 文字列, インデックスパス: インデックスパス) -> テーブルビューセル? {
         dequeueReusableCell(withIdentifier: 識別子, for: インデックスパス)
     }
     

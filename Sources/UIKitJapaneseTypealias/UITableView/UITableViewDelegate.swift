@@ -10,28 +10,28 @@ import UIKit
 
 @objc
 public protocol テーブルビュー委譲: NSObjectProtocol {
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, セルが表示される前 セル: テーブルビューセル, インデックスパス: IndexPath)
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, セルが表示される前 セル: テーブルビューセル, インデックスパス: インデックスパス)
     
     @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, ヘッダが表示される前 ビュー: ビュー, セクション: 整数)
     
     @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, フッタが表示される前 ビュー: ビュー, セクション: 整数)
     
     
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, セルの表示が終わった後 セル: テーブルビューセル, インデックスパス: IndexPath)
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, セルの表示が終わった後 セル: テーブルビューセル, インデックスパス: インデックスパス)
     
     @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, ヘッダの表示が終わった後 ビュー: ビュー, セクション: 整数)
     
     @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, フッタの表示が終わった後 ビュー: ビュー, セクション: 整数)
     
     
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 行の高さ インデックスパス: IndexPath) -> CGFloat
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 行の高さ インデックスパス: インデックスパス) -> CGFloat
     
     @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, ヘッダの高さ セクション: 整数) -> CGFloat
     
     @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, フッタの高さ セクション: 整数) -> CGFloat
     
     
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 予想される行の高さ インデックスパス: IndexPath) -> CGFloat
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 予想される行の高さ インデックスパス: インデックスパス) -> CGFloat
     
     @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 予想されるヘッダの高さ セクション: 整数) -> CGFloat
     
@@ -43,74 +43,74 @@ public protocol テーブルビュー委譲: NSObjectProtocol {
     @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, フッタビュー セクション: 整数) -> ビュー?
     
     
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 行をハイライトするべきか インデックスパス: IndexPath) -> 真理値
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 行をハイライトするべきか インデックスパス: インデックスパス) -> 真理値
     
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 行がハイライトされた後 インデックスパス: IndexPath)
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 行がハイライトされた後 インデックスパス: インデックスパス)
     
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 行のハイライトが解除された後 インデックスパス: IndexPath)
-    
-    
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 行が選択される前 インデックスパス: IndexPath) -> IndexPath?
-    
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 行の選択が解除される前 インデックスパス: IndexPath) -> IndexPath?
-    
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 行が選択された後 インデックスパス: IndexPath)
-    
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 行の選択が解除された後 インデックスパス: IndexPath)
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 行のハイライトが解除された後 インデックスパス: インデックスパス)
     
     
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 編集スタイル インデックスパス: IndexPath) -> UITableViewCell.EditingStyle
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 行が選択される前 インデックスパス: インデックスパス) -> インデックスパス?
     
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 削除ボタンのタイトル インデックスパス: IndexPath) -> 文字列?
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 行の選択が解除される前 インデックスパス: インデックスパス) -> インデックスパス?
+    
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 行が選択された後 インデックスパス: インデックスパス)
+    
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 行の選択が解除された後 インデックスパス: インデックスパス)
+    
+    
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 編集スタイル インデックスパス: インデックスパス) -> UITableViewCell.EditingStyle
+    
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 削除ボタンのタイトル インデックスパス: インデックスパス) -> 文字列?
     
     @available(iOS, introduced: 8.0, deprecated: 13.0)
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 編集アクション インデックスパス: IndexPath) -> [テーブルビュー行アクション]?
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 編集アクション インデックスパス: インデックスパス) -> [テーブルビュー行アクション]?
     
     
     @available(iOS 11.0, *)
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 前縁のスワイプアクション設定 インデックスパス: IndexPath) -> スワイプアクション設定?
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 前縁のスワイプアクション設定 インデックスパス: インデックスパス) -> スワイプアクション設定?
     
     @available(iOS 11.0, *)
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 後縁のスワイプアクション設定 インデックスパス: IndexPath) -> スワイプアクション設定?
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 後縁のスワイプアクション設定 インデックスパス: インデックスパス) -> スワイプアクション設定?
     
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 編集中に行にインデントを追加するべきか インデックスパス: IndexPath) -> 真理値
-    
-    
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 行の編集が始まる前 インデックスパス: IndexPath)
-    
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 行の編集が終わった後 インデックスパス: IndexPath?)
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 編集中に行にインデントを追加するべきか インデックスパス: インデックスパス) -> 真理値
     
     
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 移動元インデックスパス: IndexPath, 提案する移動先インデックスパス: IndexPath) -> IndexPath
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 行の編集が始まる前 インデックスパス: インデックスパス)
     
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 行のインデントレベル インデックスパス: IndexPath) -> 整数
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 行の編集が終わった後 インデックスパス: インデックスパス?)
+    
+    
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 移動元インデックスパス: インデックスパス, 提案する移動先インデックスパス: インデックスパス) -> インデックスパス
+    
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 行のインデントレベル インデックスパス: インデックスパス) -> 整数
     
     
     @available(iOS, introduced: 5.0, deprecated: 13.0)
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, メニューを表示するべきか インデックスパス: IndexPath) -> 真理値
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, メニューを表示するべきか インデックスパス: インデックスパス) -> 真理値
     
     @available(iOS, introduced: 5.0, deprecated: 13.0)
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, アクションを実行可能か セレクタ: Selector, インデックスパス: IndexPath, センダ: Any?) -> 真理値
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, アクションを実行可能か セレクタ: Selector, インデックスパス: インデックスパス, センダ: Any?) -> 真理値
     
     @available(iOS, introduced: 5.0, deprecated: 13.0)
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, アクションを実行 セレクタ: Selector, インデックスパス: IndexPath, センダ: Any?)
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, アクションを実行 セレクタ: Selector, インデックスパス: インデックスパス, センダ: Any?)
     
     
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 行をフォーカス可能か インデックスパス: IndexPath) -> 真理値
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 行をフォーカス可能か インデックスパス: インデックスパス) -> 真理値
     
     @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, フォーカスを更新すべきか コンテキスト: テーブルビューフォーカス更新コンテキスト) -> 真理値
     
     @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, フォーカスを更新した後 コンテキスト: テーブルビューフォーカス更新コンテキスト, コーディネータ: フォーカスアニメーションコーディネータ)
     
-    @objc optional func 優先的にフォーカスされる行(テーブルビュー: テーブルビュー) -> IndexPath?
+    @objc optional func 優先的にフォーカスされる行(テーブルビュー: テーブルビュー) -> インデックスパス?
     
     
     @available(iOS 15.0, *)
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 行フォーカス時に自動で選択するか インデックスパス: IndexPath) -> 真理値
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 行フォーカス時に自動で選択するか インデックスパス: インデックスパス) -> 真理値
     
     
     @available(iOS 13.0, *)
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, コンテキストメニュー設定 インデックスパス: IndexPath, 位置: 位置) -> コンテキストメニュー設定?
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, コンテキストメニュー設定 インデックスパス: インデックスパス, 位置: 位置) -> コンテキストメニュー設定?
     
     @available(iOS 13.0, *)
     @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, ハイライト中のコンテキストメニューのためのプレビュー 設定: コンテキストメニュー設定) -> ターゲットプレビュー?
