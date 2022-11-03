@@ -12,7 +12,7 @@ import UIKit
 public protocol テーブルビューデータソース: AnyObject {
     @objc func テーブルビュー(_ テーブルビュー: テーブルビュー, セクション中の行数 セクション: 整数) -> 整数
     
-    @objc func テーブルビュー(_ テーブルビュー: テーブルビュー, セル インデックスパス: IndexPath) -> テーブルビューセル
+    @objc func テーブルビュー(_ テーブルビュー: テーブルビュー, セル インデックスパス: インデックスパス) -> テーブルビューセル
     
     @objc optional func セクション数(テーブルビュー: テーブルビュー) -> 整数
     
@@ -20,17 +20,17 @@ public protocol テーブルビューデータソース: AnyObject {
     
     @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, フッタのタイトル セクション: 整数) -> 文字列?
     
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 編集可能か インデックスパス: IndexPath) -> 真理値
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 編集可能か インデックスパス: インデックスパス) -> 真理値
     
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 移動可能か インデックスパス: IndexPath) -> 真理値
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 移動可能か インデックスパス: インデックスパス) -> 真理値
     
     @objc optional func セクションインデックスのタイトル(テーブルビュー: テーブルビュー) -> [文字列]?
     
     @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, インデックスタイトルに対するセクション タイトル: 文字列, インデックス: 整数) -> 整数
     
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, コミット 編集スタイル: テーブルビューセル.EditingStyle, インデックスパス: IndexPath)
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, コミット 編集スタイル: テーブルビューセル.EditingStyle, インデックスパス: インデックスパス)
     
-    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 行を移動 移動元インデックスパス: IndexPath, 移動先インデックスパス: IndexPath)
+    @objc optional func テーブルビュー(_ テーブルビュー: テーブルビュー, 行を移動 移動元インデックスパス: インデックスパス, 移動先インデックスパス: インデックスパス)
 }
 
 extension UITableView: UITableViewDataSource {
